@@ -1,0 +1,7 @@
+compile
+compile -deprecation
+compile-deprecation
+compile
+test
+compile
+test

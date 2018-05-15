@@ -1,0 +1,4 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestSubExpression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32ma subtraction expression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return value -5 in Subtract(IntValue(5), IntValue(10))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should lead to an exception in Subtract(IntValue(5), BoolValue(False))[0m[0m

@@ -8,7 +8,7 @@ import org.scalatest.BeforeAndAfter
 
 class TestAddExpression extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  behavior of "an add expressions"
+  behavior of "an add expression"
 
   it should "return value 15 in Add(IntValue(5), IntValue(10))" in {
     val val5  = IntValue(5)
@@ -19,10 +19,5 @@ class TestAddExpression extends FlatSpec with Matchers with GivenWhenThen with B
   }
 
   it should "lead to an exception in Add(IntValue(5), BoolValue(False))" in {
-    val val5 = IntValue(5)
-    val valf = BoolValue(false)
-    val add = new AddExpression(val5, valf)
-
-   // add.eval() should be (IntValue(5))
   }
 }

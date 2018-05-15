@@ -1,0 +1,4 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestNotExpression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32man not expression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true in Not(false)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false in Not(true)[0m[0m

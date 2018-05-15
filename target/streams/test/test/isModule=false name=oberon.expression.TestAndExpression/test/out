@@ -1,0 +1,6 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestAndExpression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32man and expression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true in And(true, true)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false in And(true, false)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false in And(false, true)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false in And(false, false)[0m[0m

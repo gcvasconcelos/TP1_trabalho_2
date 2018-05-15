@@ -1,0 +1,3 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestExpression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msimple expressions[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return value 5 in IntValue(5).eval[0m[0m
