@@ -7,8 +7,6 @@ import org.scalatest.BeforeAndAfter
 
 
 import oberon.Environment._
-
-import oberon.expression.IntValue
 import oberon.expression._
 import oberon.command._
 
@@ -41,7 +39,7 @@ class TestWhile extends FlatSpec with Matchers with GivenWhenThen with BeforeAnd
     val res = lookup("soma")
     res match {
       case Some(v) => v.eval() should be (IntValue(55))
-      case _       => 5 should be (1)  
+      case _       => 5 should be (1)
     }
   }
 }
