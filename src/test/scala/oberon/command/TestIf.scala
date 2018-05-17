@@ -10,9 +10,9 @@ import oberon.Environment._
 import oberon.expression._
 import oberon.command._
 
-class TestIf extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
+class TestIfThen extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  behavior of "an if command"
+  behavior of "an ifthen command"
 
   before {
     clear()
@@ -24,7 +24,7 @@ class TestIf extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAft
     val a3 = new Assignment("val10", IntValue(10))      
     val a4 = new Assignment("soma", new AddExpression(new VarRef("soma"), new VarRef("val10")))
     val cond = new LoExpression(new VarRef("val5"), new VarRef("val10"))
-    val w1 = new If(cond, a4)
+    val w1 = new IfThen(cond, a4)
 
     a1.run()
     a2.run()
@@ -45,12 +45,11 @@ class TestIf extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAft
     val a4 = new Assignment("res", new AddExpression(new VarRef("val5"), new VarRef("val10")))    
     val a5 = new Assignment("soma", new AddExpression(new VarRef("soma"), new VarRef("res")))
     val cond = new LoExpression(new VarRef("val5"), new VarRef("val10"))
-    val w1 = new If(cond, new BlockCommand(List(a4, a5)))
+    val w1 = new IfThen(cond, new BlockCommand(List(a4, a5)))
 
     a1.run()
     a2.run()
     a3.run()
-    a4.run()
     w1.run()
 
     val res = lookup("soma")

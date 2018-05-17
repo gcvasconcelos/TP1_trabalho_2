@@ -31,15 +31,30 @@ class While(val cond: Expression, val command: Command) extends Command {
 
   override
   def run() : Unit = {
-    // println("Condicao:" + cond)
-    // println("Environment: ")
-    // println(stack)
 
     val v = cond.eval.asInstanceOf[BoolValue]
 
     v match {
       case BoolValue(true) => { command.run(); this.run(); }
       case _               => { } 
+    }
+  }
+
+}
+
+class For(val control: Command, val cond: Expression, val iter: Command, val command: Command) extends Command{
+
+  override 
+  def run(): Unit = {
+    val v = cond.eval.asInstanceOf[BoolValue]
+    control.run
+    v match {
+      case BoolValue(true) if true => { 
+        command.run
+        iter.run
+        this.run  
+      }
+      case _ => {}
     }
   }
 
@@ -53,17 +68,15 @@ class Print(val exp: Expression) extends Command {
 
 }
 
-class If(val cond: Expression, val command: Command) extends Command {
+class IfThen(val cond: Expression, val command: Command) extends Command {
   
   override 
   def run(): Unit = {
     val v = cond.eval.asInstanceOf[BoolValue]
 
     v match {
-      case BoolValue(true) => { 
-        command.run
-      }
-      case _ => { }
+      case BoolValue(true) => command.run
+      case _               => { }
     }
   }
 

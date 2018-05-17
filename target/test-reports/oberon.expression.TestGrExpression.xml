@@ -6,9 +6,9 @@
     </properties>
                      <testcase classname="oberon.expression.TestGrExpression" name="an greater expression should return value true when Gr(IntValue(2), IntValue(1))" time="0.0">
                                                  
-                                               </testcase><testcase classname="oberon.expression.TestGrExpression" name="an greater expression should return value false when Gr(IntValue(2), IntValue(2))" time="0.0">
+                                               </testcase><testcase classname="oberon.expression.TestGrExpression" name="an greater expression should return value false when Gr(IntValue(2), IntValue(2))" time="0.001">
                                                  
-                                               </testcase><testcase classname="oberon.expression.TestGrExpression" name="an greater expression should return value false when Gr(IntValue(1), IntValue(2))" time="0.001">
+                                               </testcase><testcase classname="oberon.expression.TestGrExpression" name="an greater expression should return value false when Gr(IntValue(1), IntValue(2))" time="0.0">
                                                  
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>
