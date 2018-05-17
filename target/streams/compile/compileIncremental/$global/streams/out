@@ -2,35 +2,35 @@
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(oberon.command.Assignment, oberon.command.Command, oberon.command.BlockCommand, oberon.command.IfThen, oberon.command.Print, oberon.command.While, oberon.command.For)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(oberon.expression.GrExpression, oberon.expression.AndExpression, oberon.expression.SubExpression, oberon.expression.AddExpression, oberon.expression.EqExpression, oberon.expression.MultExpression, oberon.expression.DivExpression, oberon.expression.BinExpression, oberon.expression.OrExpression, oberon.expression.LeExpression, oberon.expression.NotExpression, oberon.expression.LoExpression, oberon.expression.GeExpression)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(oberon.command.Assignment, oberon.command.Command, oberon.command.BlockCommand, oberon.command.IfThen, oberon.command.Print, oberon.command.While, oberon.command.For)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(oberon.expression.GrExpression, oberon.expression.AndExpression, oberon.expression.SubExpression, oberon.expression.AddExpression, oberon.expression.EqExpression, oberon.expression.MultExpression, oberon.expression.DivExpression, oberon.expression.BinExpression, oberon.expression.OrExpression, oberon.expression.LeExpression, oberon.expression.NotExpression, oberon.expression.LoExpression, oberon.expression.GeExpression)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala)[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 3f31c1eb for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7ad54edf for Scala compiler version 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/gcvasconcelos/.sbt/boot/scala-2.12.4/lib/scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.2.jar:/home/gcvasconcelos/.sbt/boot/scala-2.12.4/lib/scala-reflect.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.4.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.391968191 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.45508059 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from oberon.command.IfThenElse...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(oberon.command.IfThenElse)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(oberon.command.IfThenElse)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(oberon.command.IfThenElse,ModifiedNames(changes = UsedName(oberon;command;IfThenElse;init;,[Default]), UsedName(run,[Default]), UsedName(isInstanceOf,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName($isInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(elseCommand,[Default]), UsedName(IfThenElse,[Default]), UsedName(asInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(wait,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notify,[Default]), UsedName(command,[Default]), UsedName(==,[Default]), UsedName(ne,[Default]), UsedName(getClass,[Default]), UsedName(cond,[Default]), UsedName(equals,[Default]), UsedName(##,[Default]), UsedName(eq,[Default]), UsedName(clone,[Default]), UsedName(synchronized,[Default]), UsedName(hashCode,[Default]))) invalidates 1 classes due to The oberon.command.IfThenElse has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(oberon;command;IfThenElse;init;,[Default]), UsedName(run,[Default]), UsedName(isInstanceOf,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName($isInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(elseCommand,[Default]), UsedName(IfThenElse,[Default]), UsedName(asInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(wait,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notify,[Default]), UsedName(command,[Default]), UsedName(==,[Default]), UsedName(ne,[Default]), UsedName(getClass,[Default]), UsedName(cond,[Default]), UsedName(equals,[Default]), UsedName(##,[Default]), UsedName(eq,[Default]), UsedName(clone,[Default]), UsedName(synchronized,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(oberon.command.IfThenElse)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from oberon.expression.NeqExpression...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(oberon.expression.NeqExpression)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(oberon.expression.NeqExpression)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(oberon.expression.NeqExpression,ModifiedNames(changes = UsedName(eval,[Default]), UsedName(isInstanceOf,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName($isInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(rhs,[Default]), UsedName(asInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(wait,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notify,[Default]), UsedName(==,[Default]), UsedName(oberon;expression;NeqExpression;init;,[Default]), UsedName(ne,[Default]), UsedName(getClass,[Default]), UsedName(equals,[Default]), UsedName(##,[Default]), UsedName(NeqExpression,[Default]), UsedName(eq,[Default]), UsedName(clone,[Default]), UsedName(lhs,[Default]), UsedName(synchronized,[Default]), UsedName(hashCode,[Default]))) invalidates 1 classes due to The oberon.expression.NeqExpression has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(eval,[Default]), UsedName(isInstanceOf,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName($isInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(rhs,[Default]), UsedName(asInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(wait,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notify,[Default]), UsedName(==,[Default]), UsedName(oberon;expression;NeqExpression;init;,[Default]), UsedName(ne,[Default]), UsedName(getClass,[Default]), UsedName(equals,[Default]), UsedName(##,[Default]), UsedName(NeqExpression,[Default]), UsedName(eq,[Default]), UsedName(clone,[Default]), UsedName(lhs,[Default]), UsedName(synchronized,[Default]), UsedName(hashCode,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(oberon.expression.NeqExpression)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	> [0m
 [0m[[0m[0mdebug[0m] [0m[0m	> [0m
 [0m[[0m[0mdebug[0m] [0m[0m        [0m
