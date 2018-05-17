@@ -1,20 +1,20 @@
 #Successful Tests
-#Wed May 16 21:33:27 BRT 2018
-oberon.expression.TestAddExpression=1526517207455
-oberon.expression.TestExpression=1526517207441
-oberon.expression.TestMultExpression=1526517207470
-oberon.command.TestAssignment=1526517207426
-oberon.command.TestIfThen=1526517207533
+#Wed May 16 21:34:35 BRT 2018
+oberon.expression.TestAddExpression=1526517275221
+oberon.expression.TestExpression=1526517275192
+oberon.expression.TestMultExpression=1526517275237
+oberon.command.TestAssignment=1526517275171
+oberon.command.TestIfThen=1526517275323
 oberon.command.TestIf=1526514810600
-oberon.expression.TestLoExpression=1526517207485
-oberon.command.TestFor=1526517207478
-oberon.expression.TestGrExpression=1526517207525
-oberon.expression.TestEqExpression=1526517207434
-oberon.command.TestWhile=1526517207410
-oberon.expression.TestGeExpression=1526517207500
-oberon.expression.TestNotExpression=1526517207507
-oberon.expression.TestSubExpression=1526517207463
-oberon.expression.TestDivExpression=1526517207448
-oberon.expression.TestAndExpression=1526517207418
-oberon.expression.TestOrExpression=1526517207493
-oberon.expression.TestLeExpression=1526517207517
+oberon.expression.TestLoExpression=1526517275255
+oberon.command.TestFor=1526517275245
+oberon.expression.TestGrExpression=1526517275311
+oberon.expression.TestEqExpression=1526517275181
+oberon.command.TestWhile=1526517275148
+oberon.expression.TestGeExpression=1526517275280
+oberon.expression.TestNotExpression=1526517275290
+oberon.expression.TestSubExpression=1526517275229
+oberon.expression.TestDivExpression=1526517275209
+oberon.expression.TestAndExpression=1526517275161
+oberon.expression.TestOrExpression=1526517275268
+oberon.expression.TestLeExpression=1526517275303

@@ -44,10 +44,11 @@ class While(val cond: Expression, val command: Command) extends Command {
 
 class For(val control: Command, val cond: Expression, val iter: Command, val command: Command) extends Command{
 
+  control.run
+  
   override 
   def run(): Unit = {
     val v = cond.eval.asInstanceOf[BoolValue]
-    control.run
     v match {
       case BoolValue(true) if true => { 
         command.run
