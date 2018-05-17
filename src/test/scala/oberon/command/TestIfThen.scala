@@ -12,7 +12,7 @@ import oberon.command._
 
 class TestIfThen extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  behavior of "an ifthen command"
+  behavior of "an if then command"
 
   before {
     clear()

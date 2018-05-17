@@ -8,9 +8,9 @@
                                                  
                                                </testcase><testcase classname="oberon.expression.TestAndExpression" name="an and expression should return false in And(true, false)" time="0.0">
                                                  
-                                               </testcase><testcase classname="oberon.expression.TestAndExpression" name="an and expression should return false in And(false, true)" time="0.0">
+                                               </testcase><testcase classname="oberon.expression.TestAndExpression" name="an and expression should return false in And(false, true)" time="0.001">
                                                  
-                                               </testcase><testcase classname="oberon.expression.TestAndExpression" name="an and expression should return false in And(false, false)" time="0.001">
+                                               </testcase><testcase classname="oberon.expression.TestAndExpression" name="an and expression should return false in And(false, false)" time="0.0">
                                                  
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>

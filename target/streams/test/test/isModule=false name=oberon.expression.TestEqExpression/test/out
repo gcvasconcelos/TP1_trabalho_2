@@ -1,4 +1,2 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mTestEqExpression:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32man equality expression[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return value true in Eq(IntValue(1), IntValue(1))[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return value false in Eq(IntValue(5), IntValue(3))[0m[0m

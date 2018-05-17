@@ -45,17 +45,17 @@ class While(val cond: Expression, val command: Command) extends Command {
 class For(val control: Command, val cond: Expression, val iter: Command, val command: Command) extends Command{
 
   control.run
-  
+
   override 
   def run(): Unit = {
     val v = cond.eval.asInstanceOf[BoolValue]
     v match {
-      case BoolValue(true) if true => { 
+      case BoolValue(true) => { 
         command.run
         iter.run
         this.run  
       }
-      case _ => {}
+      case _               => {}
     }
   }
 
@@ -81,4 +81,17 @@ class IfThen(val cond: Expression, val command: Command) extends Command {
     }
   }
 
+}
+
+class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Command) extends Command {
+
+  override 
+  def run(): Unit = {
+    val v = cond.eval.asInstanceOf[BoolValue]
+
+    v match {
+      case BoolValue(true) => command.run
+      case _               => elseCommand.run
+    } 
+  }
 }

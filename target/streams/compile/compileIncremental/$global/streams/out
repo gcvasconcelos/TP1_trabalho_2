@@ -17,14 +17,23 @@
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7af77138 for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 3f31c1eb for Scala compiler version 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/gcvasconcelos/.sbt/boot/scala-2.12.4/lib/scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.2.jar:/home/gcvasconcelos/.sbt/boot/scala-2.12.4/lib/scala-reflect.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.4.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.275609824 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.391968191 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from oberon.command.IfThenElse...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(oberon.command.IfThenElse)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(oberon.command.IfThenElse)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(oberon.command.IfThenElse,ModifiedNames(changes = UsedName(oberon;command;IfThenElse;init;,[Default]), UsedName(run,[Default]), UsedName(isInstanceOf,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName($isInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(elseCommand,[Default]), UsedName(IfThenElse,[Default]), UsedName(asInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(wait,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notify,[Default]), UsedName(command,[Default]), UsedName(==,[Default]), UsedName(ne,[Default]), UsedName(getClass,[Default]), UsedName(cond,[Default]), UsedName(equals,[Default]), UsedName(##,[Default]), UsedName(eq,[Default]), UsedName(clone,[Default]), UsedName(synchronized,[Default]), UsedName(hashCode,[Default]))) invalidates 1 classes due to The oberon.command.IfThenElse has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(oberon;command;IfThenElse;init;,[Default]), UsedName(run,[Default]), UsedName(isInstanceOf,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName($isInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(elseCommand,[Default]), UsedName(IfThenElse,[Default]), UsedName(asInstanceOf,[Default]), UsedName(finalize,[Default]), UsedName(wait,[Default]), UsedName($asInstanceOf,[Default]), UsedName(notify,[Default]), UsedName(command,[Default]), UsedName(==,[Default]), UsedName(ne,[Default]), UsedName(getClass,[Default]), UsedName(cond,[Default]), UsedName(equals,[Default]), UsedName(##,[Default]), UsedName(eq,[Default]), UsedName(clone,[Default]), UsedName(synchronized,[Default]), UsedName(hashCode,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(oberon.command.IfThenElse)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
