@@ -1,4 +1,24 @@
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestIf.scala:13:7: TestIfThen is already defined as class TestIfThen[0m
-[0m[[0m[31merror[0m] [0m[0mclass TestIfThen extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestFor.scala:33:24: not found: value VarReference[0m
+[0m[[0m[31merror[0m] [0m[0m      new LoExpression(VarReference("x"), IntValue(6)),[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestFor.scala:34:25: not found: value VarReference[0m
+[0m[[0m[31merror[0m] [0m[0m      new AddExpression(VarReference("i"), IntValue(1)),[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestFor.scala:34:7: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : oberon.expression.AddExpression[0m
+[0m[[0m[31merror[0m] [0m[0m required: oberon.command.Command[0m
+[0m[[0m[31merror[0m] [0m[0m      new AddExpression(VarReference("i"), IntValue(1)),[0m
 [0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestFor.scala:36:9: not enough arguments for constructor Assignment: (id: String, expression: oberon.expression.Expression)oberon.command.Assignment.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter expression.[0m
+[0m[[0m[31merror[0m] [0m[0m        new Assignment(VarReference("x")), [0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestFor.scala:37:27: not found: value VarReference[0m
+[0m[[0m[31merror[0m] [0m[0m        new AddExpression(VarReference("x"), IntValue(2))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestFor.scala:35:7: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : oberon.expression.MultExpression[0m
+[0m[[0m[31merror[0m] [0m[0m required: oberon.command.Command[0m
+[0m[[0m[31merror[0m] [0m[0m      new MultExpression([0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m

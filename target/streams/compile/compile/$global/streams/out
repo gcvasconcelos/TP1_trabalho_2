@@ -1,5 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:53:5: match may not be exhaustive.[0m
-[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: BoolValue(false)[0m
-[0m[[0m[33mwarn[0m] [0m[0m    v match {[0m
-[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Declaration.scala:18:12: class Function needs to be abstract, since method eval in trait Expression of type ()oberon.expression.Value is not defined[0m
+[0m[[0m[31merror[0m] [0m[0mcase class Function(val name: String, val params: List[VarDeclaration], val command: Command) extends Expression [0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -11,3 +11,8 @@ compile
 test
 ]
 test
+sbt clean
+clean
+compile
+test
+compile

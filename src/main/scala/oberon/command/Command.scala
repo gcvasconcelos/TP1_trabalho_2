@@ -9,7 +9,6 @@ trait Command {
   def run() : Unit 
 }
 
-
 class BlockCommand(val cmds: List[Command]) extends Command {
   
   override
@@ -18,21 +17,13 @@ class BlockCommand(val cmds: List[Command]) extends Command {
   }
 }
 
-class Assignment(val id: String, val expression: Expression) extends Command {
-
-  override
-  def run() : Unit = {
-    map(id, expression.eval())
-  }
-
-}
-
 class While(val cond: Expression, val command: Command) extends Command {
 
   override
   def run() : Unit = {
 
     val v = cond.eval.asInstanceOf[BoolValue]
+    println("ENVIRONMENT->" + stack)
 
     v match {
       case BoolValue(true) => { command.run(); this.run(); }
@@ -42,20 +33,20 @@ class While(val cond: Expression, val command: Command) extends Command {
 
 }
 
-class For(val control: Command, val cond: Expression, val iter: Command, val command: Command) extends Command{
+class For(val control: Assignment, val cond: Expression, val iter: Command, val command: Command) extends Command{
 
-  control.run
 
   override 
   def run(): Unit = {
     val v = cond.eval.asInstanceOf[BoolValue]
     v match {
       case BoolValue(true) => { 
+        control.run
         command.run
         iter.run
         this.run  
       }
-      case _               => {}
+      case _               => { }
     }
   }
 
@@ -94,4 +85,6 @@ class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Co
       case _               => elseCommand.run
     } 
   }
+  
 }
+

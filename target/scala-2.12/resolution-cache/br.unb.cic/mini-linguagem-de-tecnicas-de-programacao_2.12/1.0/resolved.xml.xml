@@ -4,7 +4,7 @@
 		module="mini-linguagem-de-tecnicas-de-programacao_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20180514210212"
+		publication="20180522191149"
 	>
 		<description>
 		Mini linguagem de Tecnicas de Programacao
@@ -33,7 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.4" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats-core_2.12" rev="1.0.1" conf="compile->default(compile)"/>
-		<dependency org="org.scalactic" name="scalactic_2.12" rev="3.0.4" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.4" conf="test->default(compile)"/>
 	</dependencies>
 </ivy-module>

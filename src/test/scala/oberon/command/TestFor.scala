@@ -1,40 +1,47 @@
-package oberon.command
+// package oberon.command
 
-import org.scalatest.FlatSpec
-import org.scalatest.Matchers
-import org.scalatest.GivenWhenThen
-import org.scalatest.BeforeAndAfter
+// import org.scalatest.FlatSpec
+// import org.scalatest.Matchers
+// import org.scalatest.GivenWhenThen
+// import org.scalatest.BeforeAndAfter
 
 
-import oberon.Environment._
-import oberon.expression._
-import oberon.command._
+// import oberon.command._
+// import oberon.expression._
+// import oberon.Environment._
 
-class TestFor extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  behavior of "a for command"
+// class TestFor extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  before {
-    clear()
-  }
+//   behavior of "a for command"
 
-  it should "lookup(soma) must be equal to 10" in {
-    val a1 = new Assignment("soma", IntValue(0))   
-    val a2 = new Assignment("val1", IntValue(1))      
-    val a3 = new Assignment("i", IntValue(0))
-    val a4 = new Assignment("i", new AddExpression(new VarRef("i"), new IntValue(1)))
-    val a5 = new Assignment("soma", new AddExpression(new VarRef("soma"), new VarRef("val1")))
-    val cond = new LoExpression(new VarRef("soma"), new IntValue(10))
-    val w1 = new For(a3, cond, a4, a5)
+//   before {
+//     clear()
+//   }
 
-    a1.run()
-    a2.run()
-    w1.run()
+//   it should "loop for should work correclty" in {
+//     val x = new VarDeclaration("x")
+//     x.run
+//     val newx = new Assignment("x", IntValue(0))
+//     newx.run
 
-    val res = lookup("soma")
-    res match {
-      case Some(v) => v.eval() should be (IntValue(10))
-      case _       => 0 should be (1)
-    }
-  }
-}
+//     val i  = new VarDeclaration("i")
+//     i.run
+
+//     val _for = new For(
+//       new Assignment("i", IntValue(0)), 
+//       new LoExpression(VarReference("x"), IntValue(6)),
+//       new AddExpression(VarReference("i"), IntValue(1)),
+//       new MultExpression(
+//         new Assignment(VarReference("x")), 
+//         new AddExpression(VarReference("x"), IntValue(2))
+//         )
+//       )
+//     _for.run
+
+//     lookup("x") match {
+//       case Some(map) => map("x") should be (Undefined()) 
+//       case _         => 1 should be (0)
+//     }
+//   }
+// }

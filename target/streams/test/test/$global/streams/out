@@ -1,29 +1,25 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestWhile, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestAndExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestAssignment, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestEqExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestDivExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestAddExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestSubExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestMultExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestFor, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestLoExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestOrExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestGeExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestNotExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestLeExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestGrExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestNeqExpression, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestIfThen, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestIfThenElse, org.scalatest.tools.Framework$$anon$1@5d404456, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 312 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 42[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 19, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 42, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestAndExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestAssignment, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestEqExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestDivExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestAddExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestSubExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestMultExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestLoExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.command.TestDeclaration, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestOrExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestGeExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestNotExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestLeExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestGrExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(oberon.expression.TestNeqExpression, org.scalatest.tools.Framework$$anon$1@624abd69, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 968 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 39[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 16, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 39, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	oberon.command.TestWhile[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestAndExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.command.TestAssignment[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestEqExpression[0m
@@ -32,13 +28,11 @@
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestAddExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestSubExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestMultExpression[0m
-[0m[[0m[0mdebug[0m] [0m[0m	oberon.command.TestFor[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestLoExpression[0m
+[0m[[0m[0mdebug[0m] [0m[0m	oberon.command.TestDeclaration[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestOrExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestGeExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestNotExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestLeExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestGrExpression[0m
 [0m[[0m[0mdebug[0m] [0m[0m	oberon.expression.TestNeqExpression[0m
-[0m[[0m[0mdebug[0m] [0m[0m	oberon.command.TestIfThen[0m
-[0m[[0m[0mdebug[0m] [0m[0m	oberon.command.TestIfThenElse[0m

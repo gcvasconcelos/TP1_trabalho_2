@@ -14,8 +14,8 @@ object Environment {
     stack.push(new HashMap[String, Value]())
   }
 
-  def pop() {
-    stack.pop()
+  def pop(): Map[String, Value] = {
+    stack.pop
   }
 
   def map(id: String, value: Value) {
@@ -25,8 +25,12 @@ object Environment {
     stack.top += (id -> value) 
   }
 
-  def lookup(id: String) : Option[Value] =
-    if(stack.isEmpty) None else Some(stack.top(id))
+  def lookup(id: String) : Option[Map[String, Value]] = {
+    stack.isEmpty match {
+      case true => None
+      case _    => Some(stack.top)
+    }
+  }
 
-  def clear() : Unit = { stack.clear() } 
+  def clear() : Unit = stack.clear() 
 }

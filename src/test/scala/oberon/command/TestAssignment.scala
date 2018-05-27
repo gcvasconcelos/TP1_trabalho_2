@@ -5,9 +5,9 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
-import oberon.Environment._
+import oberon.command._
 import oberon.expression._
+import oberon.Environment._
 
 class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
@@ -17,19 +17,22 @@ class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with Befo
     clear()
   }
 
-  it should "the environment must have an assignment x -> 5" in { 
-    val assignment = new Assignment("x", IntValue(5))
+  it should "change inicial value of variable" in { 
+    val x = new VarDeclaration("x")
+    x.run
+    val newx = new Assignment("x", IntValue(5))
+    newx.run
 
-    assignment.run()
-
-    lookup("x") should be (Some(IntValue(5))) 
+    lookup("x") match {
+      case Some(map) => map("x") should be (IntValue(5)) 
+      case _         => 1 should be (0)
+    }
   }
-  
-  it should "the environment must have an assignment x -> true" in { 
-    val assignment = new Assignment("x", BoolValue(true))
 
-    assignment.run()
-
-    lookup("x") should be (Some(BoolValue(true))) 
+  it should "throw an error when variable wasn't declared" in { 
+    a [VariableNotDeclared] should be thrownBy {
+      val x = new Assignment("x", IntValue(5))
+      x.run()
+    } 
   }
 }
