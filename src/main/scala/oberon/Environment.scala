@@ -42,6 +42,13 @@ object Environment {
     }  
   }
 
+  def lookupProcedure(id: String) : Option[ProcedureDeclaration] = {
+    procedureScope(id) match {
+      case value => Some(value) 
+      case _     => None
+    }  
+  }
+
 
   def clear() : Unit = stack.clear() 
 }
