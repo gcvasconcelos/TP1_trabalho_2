@@ -1,26 +1,27 @@
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/VarReference.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Reference.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Declaration.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Function.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Exception.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Expression.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Environment.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(oberon.expression.VarReference, oberon.command.VarDeclaration, oberon.command.Function)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(oberon.expression.IntValue, oberon.command.Command, oberon.Environment, oberon.command.BlockCommand, oberon.expression.Value, oberon.command.IfThenElse, oberon.command.IfThen, oberon.command.Print, oberon.VariableNotDeclared, oberon.VariableAlreadyDeclared, oberon.expression.Expression, oberon.command.While, oberon.command.For, oberon.expression.Undefined, oberon.expression.BoolValue)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(oberon.expression.VarReference, oberon.command.VarDeclaration, oberon.command.Function)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Reference.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Declaration.scala)[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(oberon.expression.IntValue, oberon.command.Command, oberon.Environment, oberon.command.BlockCommand, oberon.expression.Value, oberon.command.IfThenElse, oberon.command.IfThen, oberon.command.Print, oberon.VariableNotDeclared, oberon.VariableAlreadyDeclared, oberon.expression.Expression, oberon.command.While, oberon.command.For, oberon.expression.Undefined, oberon.expression.BoolValue)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Exception.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Expression.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Function.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Environment.scala, /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 5 Scala sources to /home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.4[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler a837df7 for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 1b9f9a00 for Scala compiler version 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/gcvasconcelos/.sbt/boot/scala-2.12.4/lib/scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/target/scala-2.12/classes:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-1.0.1.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.2.jar:/home/gcvasconcelos/.sbt/boot/scala-2.12.4/lib/scala-reflect.jar:/home/gcvasconcelos/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.1.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0mCompilation failed (CompilerInterface)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m

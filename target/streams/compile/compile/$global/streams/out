@@ -1,4 +1,15 @@
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Declaration.scala:18:12: class Function needs to be abstract, since method eval in trait Expression of type ()oberon.expression.Value is not defined[0m
-[0m[[0m[31merror[0m] [0m[0mcase class Function(val name: String, val params: List[VarDeclaration], val command: Command) extends Expression [0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Environment.scala:40:12: patterns after a variable pattern cannot match (SLS 8.1.1)[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case value => Some(value) [0m
+[0m[[0m[33mwarn[0m] [0m[0m           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Environment.scala:41:21: unreachable code due to variable pattern 'value' on line 40[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case _     => None[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Function.scala:28:71: unreachable code[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case cmd: BlockCommand => cmd.cmds.last.asInstanceOf[Return].run()[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:17:7: overriding method run in trait Command of type ()Unit;[0m
+[0m[[0m[31merror[0m] [0m[0m method run has incompatible type[0m
+[0m[[0m[31merror[0m] [0m[0m  def run() : Value = {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

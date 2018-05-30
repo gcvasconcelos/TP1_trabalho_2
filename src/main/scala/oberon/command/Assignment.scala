@@ -1,7 +1,8 @@
 package oberon.command
 
-import oberon.Environment._
 import oberon.expression.Expression
+import oberon.Environment._
+import oberon._
 
 class Assignment(val id: String, val expression: Expression) extends Command {
 

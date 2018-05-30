@@ -3,10 +3,21 @@ package oberon.command
 import oberon.Environment._
 
 import oberon.expression.Expression
+import oberon.expression.Expression
 import oberon.expression.BoolValue
+import oberon.expression.Value
 
 trait Command {
   def run() : Unit 
+}
+
+class Return(val expression: Expression) extends Command {
+
+  override 
+  def run() : Value = {
+    expression.eval()
+  }
+
 }
 
 class BlockCommand(val cmds: List[Command]) extends Command {

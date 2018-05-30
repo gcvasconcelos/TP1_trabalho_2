@@ -6,12 +6,15 @@ import scala.collection.mutable.HashMap
 
 import oberon.expression.Value
 import oberon.expression.Expression
+import oberon._
 
 object Environment {
-  var stack = new Stack[Map[String, Value]] () 
+  var stack = new Stack[Map[String, Value]] 
+  var functionScope = new HashMap[String, FunctionDeclaration]
+  var procedureScope = new HashMap[String, ProcedureDeclaration]
 
   def push() {
-    stack.push(new HashMap[String, Value]())
+    stack.push(new HashMap[String, Value])
   }
 
   def pop(): Map[String, Value] = {
@@ -31,6 +34,14 @@ object Environment {
       case _    => Some(stack.top)
     }
   }
+
+  def lookupFunction(id: String) : Option[FunctionDeclaration] = {
+    functionScope(id) match {
+      case value => Some(value) 
+      case _     => None
+    }  
+  }
+
 
   def clear() : Unit = stack.clear() 
 }
