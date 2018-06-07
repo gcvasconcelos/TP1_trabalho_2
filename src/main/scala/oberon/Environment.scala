@@ -37,14 +37,14 @@ object Environment {
 
   def lookupFunction(id: String) : Option[FunctionDeclaration] = {
     functionScope(id) match {
-      case value => Some(value) 
+      case value: FunctionDeclaration => Some(value)
       case _     => None
     }  
   }
 
   def lookupProcedure(id: String) : Option[ProcedureDeclaration] = {
     procedureScope(id) match {
-      case value => Some(value) 
+      case value: ProcedureDeclaration => Some(value) 
       case _     => None
     }  
   }

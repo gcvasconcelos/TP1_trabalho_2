@@ -9,6 +9,7 @@ import org.scalatest.BeforeAndAfter
 import oberon.command._
 import oberon.expression._
 import oberon.Environment._
+import oberon._
 
 class TestDeclaration extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 

@@ -1,21 +1,8 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/Environment.scala:40:12: patterns after a variable pattern cannot match (SLS 8.1.1)[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case value => Some(value) [0m
-[0m[[0m[33mwarn[0m] [0m[0m           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/Environment.scala:41:21: unreachable code due to variable pattern 'value' on line 40[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case _     => None[0m
-[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/Environment.scala:47:12: patterns after a variable pattern cannot match (SLS 8.1.1)[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case value => Some(value) [0m
-[0m[[0m[33mwarn[0m] [0m[0m           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/Environment.scala:48:21: unreachable code due to variable pattern 'value' on line 47[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case _     => None[0m
-[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/expression/Function.scala:28:71: unreachable code[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case cmd: BlockCommand => cmd.cmds.last.asInstanceOf[Return].run()[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/command/Command.scala:17:7: overriding method run in trait Command of type ()Unit;[0m
-[0m[[0m[31merror[0m] [0m[0m method run has incompatible type[0m
-[0m[[0m[31merror[0m] [0m[0m  def run() : Value = {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m5 warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Procedure.scala:4:23: imported `Assignment' is permanently hidden by definition of class Assignment in package command[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport oberon.command.Assignment[0m
+[0m[[0m[33mwarn[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Procedure.scala:8:42: not found: type Expression[0m
+[0m[[0m[31merror[0m] [0m[0mclass Procedure(name: String, args: List[Expression]) extends Command{[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

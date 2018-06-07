@@ -11,12 +11,10 @@ trait Command {
   def run() : Unit 
 }
 
-class Return(val expression: Expression) extends Command {
+case class Return(val expression: Expression) extends Command {
 
   override 
-  def run() : Value = {
-    expression.eval()
-  }
+  def run() : Unit = { }
 
 }
 

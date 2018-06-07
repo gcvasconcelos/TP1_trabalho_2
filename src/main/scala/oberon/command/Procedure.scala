@@ -1,8 +1,7 @@
-package oberon.expression
+package oberon.command
 
 import oberon.Environment._
-import oberon.command.Assignment
-import oberon.command._
+import oberon.expression._
 import oberon._
 
 class Procedure(name: String, args: List[Expression]) extends Command{
