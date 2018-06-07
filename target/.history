@@ -21,3 +21,5 @@ compile
 test
 compile
 test
+clean
+test

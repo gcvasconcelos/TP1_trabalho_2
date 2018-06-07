@@ -32,7 +32,6 @@ class While(val cond: Expression, val command: Command) extends Command {
   def run() : Unit = {
 
     val v = cond.eval.asInstanceOf[BoolValue]
-    println("ENVIRONMENT->" + stack)
 
     v match {
       case BoolValue(true) => { command.run(); this.run(); }

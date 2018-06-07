@@ -15,7 +15,7 @@ class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with Befo
   behavior of "an assignment command"
 
   before {
-    clear()
+    clear
   }
 
   it should "change inicial value of variable" in { 
@@ -33,7 +33,7 @@ class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with Befo
   it should "throw an error when variable wasn't declared" in { 
     a [VariableNotDeclared] should be thrownBy {
       val x = new Assignment("x", IntValue(5))
-      x.run()
+      x.run
     } 
   }
 }

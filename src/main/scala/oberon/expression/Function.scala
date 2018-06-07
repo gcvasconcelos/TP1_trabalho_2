@@ -25,7 +25,7 @@ class Function(name: String, args: List[Expression]) extends Expression{
     var _return: Value = Undefined()
 
     function.command match {
-      case Return(exp) => _return = exp.eval
+      case Return(exp)       => _return = exp.eval
       case cmd: BlockCommand => _return = cmd.cmds.last.asInstanceOf[Return].expression.eval
       case _                 => throw ReturnNotFound()
     }

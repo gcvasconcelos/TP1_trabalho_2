@@ -1,0 +1,5 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestProcedure:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32ma procedure[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should result 2 when procedure: sum(1,1) is called[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should throw an error when variable wasn't declared *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception oberon.ProcedureNotDeclared to be thrown, but oberon.VariableNotDeclared was thrown (TestProcedure.scala:38)[0m[0m
