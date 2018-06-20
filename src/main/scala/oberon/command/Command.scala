@@ -41,25 +41,6 @@ class While(val cond: Expression, val command: Command) extends Command {
 
 }
 
-class For(val control: Assignment, val cond: Expression, val iter: Command, val command: Command) extends Command{
-
-
-  override 
-  def run(): Unit = {
-    val v = cond.eval.asInstanceOf[BoolValue]
-    v match {
-      case BoolValue(true) => { 
-        control.run
-        command.run
-        iter.run
-        this.run  
-      }
-      case _               => { }
-    }
-  }
-
-}
-
 class Print(val exp: Expression) extends Command {
   override
   def run() : Unit = {

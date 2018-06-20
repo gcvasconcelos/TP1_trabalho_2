@@ -1,2 +1,13 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 2.12.0); re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/visitor/PrettyPrinter.scala:114:11: value accept is not a member of oberon.expression.Expression[0m
+[0m[[0m[31merror[0m] [0m[0m    e.lhs.accept(this)[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/visitor/PrettyPrinter.scala:117:11: value accept is not a member of oberon.expression.Expression[0m
+[0m[[0m[31merror[0m] [0m[0m    e.rhs.accept(this)[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/visitor/PrettyPrinter.scala:124:7: value accept is not a member of oberon.expression.Expression[0m
+[0m[[0m[31merror[0m] [0m[0m    e.accept(this)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/visitor/PrettyPrinter.scala:131:7: value accept is not a member of oberon.command.Command[0m
+[0m[[0m[31merror[0m] [0m[0m    c.accept(this)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

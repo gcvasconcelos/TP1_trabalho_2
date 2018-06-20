@@ -23,3 +23,12 @@ compile
 test
 clean
 test
+compile
+[error]                                  ^
+compile
+test
+clean
+test
+compile
+clear
+compile
