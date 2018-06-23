@@ -12,5 +12,9 @@ class VarReference(val id: String) extends Expression {
     }
   }
 
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+
 }
 

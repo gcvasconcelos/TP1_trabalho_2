@@ -33,4 +33,8 @@ class Function(name: String, args: List[Expression]) extends Expression{
     _return
   }
 
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+
 }

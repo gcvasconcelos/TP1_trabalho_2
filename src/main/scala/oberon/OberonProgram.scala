@@ -9,4 +9,8 @@ class OberonProgram(val cmd: Command) extends Command {
     cmd.run()
   }
 
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+
 }
