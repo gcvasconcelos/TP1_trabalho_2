@@ -22,4 +22,9 @@ class Procedure(name: String, args: List[Expression]) extends Command {
     procedure.command.run
 
   }
+
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+  
 }

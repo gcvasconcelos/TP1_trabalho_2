@@ -15,6 +15,10 @@ class VarDeclaration(val id: String) {
     }
   }
 
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+
 } 
 
 class FunctionDeclaration(val name: String, val params: List[String], val command: Command) {
@@ -23,4 +27,5 @@ class FunctionDeclaration(val name: String, val params: List[String], val comman
 
 class ProcedureDeclaration(val name: String, val params: List[String], val command: Command) {
   procedureScope += (name -> this)
+
 }
