@@ -28,10 +28,10 @@ object Environment {
     stack.top += (id -> value) 
   }
 
-  def lookup(id: String) : Option[Map[String, Value]] = {
+  def lookup(id: String) : Option[Value] = {
     stack.isEmpty match {
       case true => None
-      case _    => Some(stack.top)
+      case _    => stack.top.lift(id)
     }
   }
 

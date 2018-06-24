@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestIfThen.scala:44:28: oberon.expression.Value does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m      case Some(map) => map("soma") should be (IntValue(10))[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/expression/TestProcedure.scala:32:30: oberon.expression.Value does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        case Some(map) => map("res") should be (IntValue(2))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

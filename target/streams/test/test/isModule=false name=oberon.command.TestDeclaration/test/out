@@ -1,3 +1,4 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mTestDeclaration:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32ma declaration command[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should declare a variable and initialize it with undefined value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should throw an error when two declarations of the same variable[0m[0m

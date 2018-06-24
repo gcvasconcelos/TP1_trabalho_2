@@ -15,6 +15,7 @@ class Procedure(name: String, args: List[Expression]) extends Command {
 
     var i = 0
     args.foreach { arg => 
+      new VarDeclaration(procedure.params(i)).run
       new Assignment(procedure.params(i), arg).run
       i = i + 1
     }

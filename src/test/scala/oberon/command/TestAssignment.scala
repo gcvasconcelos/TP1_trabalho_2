@@ -25,7 +25,7 @@ class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with Befo
     newx.run
 
     lookup("x") match {
-      case Some(map) => map("x") should be (IntValue(5)) 
+      case Some(_var) => _var should be (IntValue(5)) 
       case _         => 1 should be (0)
     }
   }

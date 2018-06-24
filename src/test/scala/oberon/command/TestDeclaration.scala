@@ -24,7 +24,7 @@ class TestDeclaration extends FlatSpec with Matchers with GivenWhenThen with Bef
     x.run()
 
     lookup("x") match {
-      case Some(map) => map("x") should be (Undefined()) 
+      case Some(_var) => _var should be (Undefined()) 
       case _         => 1 should be (0)
     }
   }

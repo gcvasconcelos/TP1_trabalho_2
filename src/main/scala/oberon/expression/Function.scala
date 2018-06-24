@@ -17,6 +17,7 @@ class Function(name: String, args: List[Expression]) extends Expression{
     push
     var i = 0
     args.foreach { arg => 
+      new VarDeclaration(function.params(i)).run
       new Assignment(function.params(i), arg).run
       i = i + 1
     }
