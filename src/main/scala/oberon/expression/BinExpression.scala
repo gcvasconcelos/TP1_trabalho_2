@@ -1,5 +1,7 @@
 package oberon.expression
 
+import oberon.visitor._
+
 abstract class BinExpression(val lhs: Expression, val rhs: Expression) extends Expression {
 
 }

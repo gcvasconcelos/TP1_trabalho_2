@@ -16,20 +16,30 @@ trait Value extends Expression {
   def eval() = this 
 }
 
-case class BoolValue(value: Boolean) extends Value {
+case class Undefined() extends Value {
 
-  override def calculateType(): Type = BoolType
+  override def calculateType(): Type = UndefinedType
+
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
 
 }
-
 case class IntValue(value: Integer) extends Value {
 
   override def calculateType(): Type = IntType
 
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+
 }
+case class BoolValue(value: Boolean) extends Value {
 
-case class Undefined() extends Value {
+  override def calculateType(): Type = BoolType
 
-  override def calculateType(): Type = UndefinedType
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
 
 }

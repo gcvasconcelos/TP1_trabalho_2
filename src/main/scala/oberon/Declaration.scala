@@ -4,9 +4,10 @@ import oberon.Environment._
 import oberon.expression.Undefined
 import oberon.expression.Expression
 import oberon.command._
+import oberon.visitor._
 import oberon._
 
-class VarDeclaration(val id: String) {
+class VarDeclaration(val id: String) extends Visitable {
 
   def run() : Unit = {
     lookup(id) match {

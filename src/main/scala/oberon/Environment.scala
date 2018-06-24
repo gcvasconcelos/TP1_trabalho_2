@@ -6,6 +6,7 @@ import scala.collection.mutable.HashMap
 
 import oberon.expression.Value
 import oberon.expression.Expression
+import oberon.visitor._
 import oberon._
 
 object Environment {

@@ -2,6 +2,7 @@ package oberon.command
 
 import oberon.Environment._
 import oberon.expression._
+import oberon.visitor._
 import oberon._
 
 class Procedure(name: String, args: List[Expression]) extends Command {
