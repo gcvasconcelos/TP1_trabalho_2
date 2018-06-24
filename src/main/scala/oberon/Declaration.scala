@@ -22,11 +22,18 @@ class VarDeclaration(val id: String) extends Visitable {
 
 } 
 
-class FunctionDeclaration(val name: String, val params: List[String], val command: Command) {
+class FunctionDeclaration(val name: String, val params: List[String], val command: Command) extends Visitable {
   functionScope += (name -> this)
+
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
 }
 
-class ProcedureDeclaration(val name: String, val params: List[String], val command: Command) {
+class ProcedureDeclaration(val name: String, val params: List[String], val command: Command) extends Visitable {
   procedureScope += (name -> this)
-
+  
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
 }
