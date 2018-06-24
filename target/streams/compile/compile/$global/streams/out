@@ -1,2 +1,76 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 2.12.0); re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Declaration.scala:18:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/OberonProgram.scala:12:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:19:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:32:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:51:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:63:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:81:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:99:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Procedure.scala:26:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:17:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:33:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:49:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:65:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:81:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:97:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:113:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:129:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:145:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:161:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:177:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:193:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:209:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:224:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Function.scala:37:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Reference.scala:15:27: not found: type Visitor[0m
+[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m25 errors found[0m

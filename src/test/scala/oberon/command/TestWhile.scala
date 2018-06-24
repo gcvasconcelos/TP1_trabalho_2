@@ -18,13 +18,7 @@ class TestWhile extends FlatSpec with Matchers with GivenWhenThen with BeforeAnd
   before {
     clear()
   }
-  // soma := 0;
-  //    x := 1;
-  // while(x <= 10) begin
-  //   soma := soma + x;
-  //      x := x + 1;
-  // end
-  // print(soma);  
+   
   it should "lookup(soma) must be equal to 55 after a loop summing up 1 to 10" in {
     val d1 = new VarDeclaration("soma")
     d1.run

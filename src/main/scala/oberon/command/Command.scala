@@ -9,29 +9,22 @@ import oberon.expression.Value
 
 trait Command {
   def run() : Unit 
-}
-
-case class Return(val expression: Expression) extends Command {
-
-  override 
-  def run() : Unit = { }
-
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
-
+  def typeCheck(): Boolean
 }
 
 class BlockCommand(val cmds: List[Command]) extends Command {
   
   override
   def run() : Unit = {
-    cmds.foreach(c => c.run())
+    cmds.foreach(cmd => cmd.run())
   }
 
-  override def accept(v : Visitor) {
+  override 
+  def accept(v : Visitor) {
     v.visit(this) 
   }
+
+  override def typeCheck(): Boolean = cmds.forall(cmd => cmd.typeCheck)
 
 }
 
@@ -102,3 +95,13 @@ class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Co
   
 }
 
+case class Return(val expression: Expression) extends Command {
+
+  override 
+  def run() : Unit = { }
+
+  override def accept(v : Visitor): Unit = v.visit(this)
+
+  override def typeCheck(): Boolean = expression.typeCheck
+
+}
