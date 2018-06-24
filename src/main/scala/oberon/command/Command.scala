@@ -1,11 +1,7 @@
 package oberon.command
 
 import oberon.Environment._
-
-import oberon.expression.Expression
-import oberon.expression.Expression
-import oberon.expression.BoolValue
-import oberon.expression.Value
+import oberon.expression._
 import oberon.visitor._
 
 
@@ -34,7 +30,6 @@ class While(val cond: Expression, val command: Command) extends Command {
 
   override
   def run() : Unit = {
-
     val v = cond.eval.asInstanceOf[BoolValue]
 
     v match {
@@ -45,6 +40,10 @@ class While(val cond: Expression, val command: Command) extends Command {
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def typeCheck(): Boolean = {
+    cond.calculateType == BoolType() && command.typeCheck
   }
 
 }
@@ -58,6 +57,8 @@ class Print(val exp: Expression) extends Command {
   override def accept(v : Visitor) {
     v.visit(this) 
   }
+
+  override def typeCheck(): Boolean = true
 
 }
 
@@ -77,6 +78,10 @@ class IfThen(val cond: Expression, val command: Command) extends Command {
     v.visit(this) 
   }
 
+  override def typeCheck(): Boolean = {
+    cond.calculateType == BoolType() && command.typeCheck
+  }
+
 }
 
 class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Command) extends Command {
@@ -93,6 +98,10 @@ class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Co
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def typeCheck(): Boolean = {
+    cond.calculateType == BoolType() && command.typeCheck && elseCommand.typeCheck
   }
   
 }

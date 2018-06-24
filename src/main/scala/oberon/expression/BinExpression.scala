@@ -2,9 +2,7 @@ package oberon.expression
 
 import oberon.visitor._
 
-abstract class BinExpression(val lhs: Expression, val rhs: Expression) extends Expression {
-
-}
+abstract class BinExpression(val lhs: Expression, val rhs: Expression) extends Expression {  }
 
 class AddExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
 
@@ -18,6 +16,13 @@ class AddExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs,
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType()
+    }
   }
 
 }
@@ -36,6 +41,13 @@ class SubExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs,
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType()
+    }
+  }
+
 }
 
 class MultExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
@@ -50,6 +62,13 @@ class MultExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
   }
 
 }
@@ -68,6 +87,13 @@ class DivExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs,
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
+  }
+
 }
 
 class ModExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
@@ -82,6 +108,13 @@ class ModExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs,
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
   }
 
 }
@@ -100,6 +133,37 @@ class EqExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    lhs.calculateType == rhs.calculateType match {
+      case true => lhs.calculateType
+      case _    => UndefinedType() 
+    }
+  }
+
+}
+
+
+class NeqExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
+
+  override
+  def eval: Value = {
+    val v1 = lhs.eval().asInstanceOf[IntValue].value
+    val v2 = rhs.eval().asInstanceOf[IntValue].value
+
+    return BoolValue(v1 != v2) 
+  }
+
+  override def accept(v : Visitor) {
+    v.visit(this) 
+  }
+
+  override def calculateType(): Type = {
+    lhs.calculateType == rhs.calculateType match {
+      case true => lhs.calculateType
+      case _    => UndefinedType() 
+    }
+  }
+
 }
 
 class LeExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
@@ -114,6 +178,13 @@ class LeExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
   }
 
 }
@@ -132,6 +203,13 @@ class GeExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
+  }
+
 }
 
 class LoExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
@@ -146,6 +224,13 @@ class LoExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
 
   override def accept(v : Visitor) {
     v.visit(this) 
+  }
+
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
   }
 
 }
@@ -164,20 +249,11 @@ class GrExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
     v.visit(this) 
   }
 
-}
-
-class NeqExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
-
-  override
-  def eval: Value = {
-    val v1 = lhs.eval().asInstanceOf[IntValue].value
-    val v2 = rhs.eval().asInstanceOf[IntValue].value
-
-    return BoolValue(v1 != v2) 
-  }
-
-  override def accept(v : Visitor) {
-    v.visit(this) 
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
+      case true => IntType()
+      case _    => UndefinedType() 
+    }
   }
 
 }
@@ -196,6 +272,13 @@ class AndExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs,
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == BoolType()) match {
+      case true => BoolType()
+      case _    => UndefinedType() 
+    }
+  }
+
 }
 
 class OrExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, rhs) {
@@ -212,6 +295,13 @@ class OrExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    List(lhs, rhs).forall(foo => foo.calculateType == BoolType()) match {
+      case true => BoolType()
+      case _    => UndefinedType() 
+    }
+  }
+
 }
 
 class NotExpression(value: Expression) extends Expression {
@@ -226,5 +316,12 @@ class NotExpression(value: Expression) extends Expression {
   override def accept(v : Visitor) {
     v.visit(this) 
   }
+
+  override def calculateType(): Type = {
+    value.calculateType == BoolType() match {
+      case true => BoolType()
+      case _    => UndefinedType() 
+    }
+    }
 
 }

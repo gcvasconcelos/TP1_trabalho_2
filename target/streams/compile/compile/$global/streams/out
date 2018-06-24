@@ -1,82 +1,16 @@
-<<<<<<< HEAD
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Declaration.scala:18:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/OberonProgram.scala:12:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:19:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:32:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:51:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:63:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:81:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Command.scala:99:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Procedure.scala:26:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:17:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:33:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:49:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:65:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:81:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:97:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:113:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:129:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:145:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:161:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:177:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:193:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:209:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/BinExpression.scala:224:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Function.scala:37:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Reference.scala:15:27: not found: type Visitor[0m
-[0m[[0m[31merror[0m] [0m[0m  override def accept(v : Visitor) {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m25 errors found[0m
-=======
-[0m[[0m[31merror[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/visitor/PrettyPrinter.scala:7:7: class PrettyPrinter needs to be abstract, since:[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Declaration.scala:24:7: class FunctionDeclaration needs to be abstract, since method accept in trait Visitable of type (v: oberon.visitor.Visitor)Unit is not defined[0m
+[0m[[0m[31merror[0m] [0m[0mclass FunctionDeclaration(val name: String, val params: List[String], val command: Command) extends Visitable {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/Declaration.scala:28:7: class ProcedureDeclaration needs to be abstract, since method accept in trait Visitable of type (v: oberon.visitor.Visitor)Unit is not defined[0m
+[0m[[0m[31merror[0m] [0m[0mclass ProcedureDeclaration(val name: String, val params: List[String], val command: Command) extends Visitable {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/command/Procedure.scala:8:7: class Procedure needs to be abstract, since method typeCheck in trait Command of type ()Boolean is not defined[0m
+[0m[[0m[31merror[0m] [0m[0mclass Procedure(name: String, args: List[Expression]) extends Command {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/expression/Function.scala:9:7: class Function needs to be abstract, since method calculateType in trait Expression of type ()oberon.expression.Type is not defined[0m
+[0m[[0m[31merror[0m] [0m[0mclass Function(name: String, args: List[Expression]) extends Expression{[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/visitor/PrettyPrinter.scala:7:7: class PrettyPrinter needs to be abstract, since:[0m
 [0m[[0m[31merror[0m] [0m[0mit has 8 unimplemented members.[0m
 [0m[[0m[31merror[0m] [0m[0m/** As seen from class PrettyPrinter, the missing signatures are as follows.[0m
 [0m[[0m[31merror[0m] [0m[0m *  For convenience, these are usable as stub implementations.[0m
@@ -91,5 +25,4 @@
 [0m[[0m[31merror[0m] [0m[0m  def visit(e: oberon.expression.Function): Unit = ???[0m
 [0m[[0m[31merror[0m] [0m[0mclass PrettyPrinter extends Visitor {[0m
 [0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
->>>>>>> 9ffebb597aca2bcf8c975264f94fef899fd7d1be
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
