@@ -1,2 +1,16 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 2.12.0); re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/visitor/PrettyPrinter.scala:7:7: class PrettyPrinter needs to be abstract, since:[0m
+[0m[[0m[31merror[0m] [0m[0mit has 8 unimplemented members.[0m
+[0m[[0m[31merror[0m] [0m[0m/** As seen from class PrettyPrinter, the missing signatures are as follows.[0m
+[0m[[0m[31merror[0m] [0m[0m *  For convenience, these are usable as stub implementations.[0m
+[0m[[0m[31merror[0m] [0m[0m */[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(c: oberon.VarDeclaration): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(c: oberon.ProcedureDeclaration): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(c: oberon.command.Procedure): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(c: oberon.command.IfThenElse): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(c: oberon.command.IfThen): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(c: oberon.command.Assignment): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(e: oberon.FunctionDeclaration): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def visit(e: oberon.expression.Function): Unit = ???[0m
+[0m[[0m[31merror[0m] [0m[0mclass PrettyPrinter extends Visitor {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

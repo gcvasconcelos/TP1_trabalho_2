@@ -6,8 +6,10 @@ import oberon.expression.Expression
 import oberon.expression.Expression
 import oberon.expression.BoolValue
 import oberon.expression.Value
+import oberon.visitor._
 
-trait Command {
+
+trait Command extends Visitable{
   def run() : Unit 
 }
 

@@ -2,6 +2,7 @@ package oberon.command
 
 import oberon.expression.Expression
 import oberon.Environment._
+import oberon.visitor._
 import oberon._
 
 class Assignment(val id: String, val expression: Expression) extends Command {
@@ -12,6 +13,10 @@ class Assignment(val id: String, val expression: Expression) extends Command {
       case Some(_var) => map(id, expression.eval) 
       case None      => throw VariableNotDeclared()
     }
+  }
+  
+  override def accept(v : Visitor) {
+    v.visit(this) 
   }
   
 }

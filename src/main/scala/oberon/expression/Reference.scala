@@ -1,6 +1,7 @@
 package oberon.expression
 
 import oberon.Environment._
+import oberon.visitor._
 
 class VarReference(val id: String) extends Expression {
   
