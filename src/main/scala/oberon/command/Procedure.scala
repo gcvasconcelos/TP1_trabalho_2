@@ -5,7 +5,7 @@ import oberon.expression._
 import oberon.visitor._
 import oberon._
 
-class Procedure(name: String, args: List[Expression]) extends Command {
+class Procedure(val name: String, val args: List[Expression]) extends Command {
 
   override 
   def run(): Unit = {  
@@ -27,5 +27,7 @@ class Procedure(name: String, args: List[Expression]) extends Command {
   override def accept(v : Visitor) {
     v.visit(this) 
   }
+
+  override def typeCheck(): Boolean = true
   
 }

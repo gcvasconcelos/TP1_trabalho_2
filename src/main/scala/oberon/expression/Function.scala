@@ -6,7 +6,7 @@ import oberon.command._
 import oberon.visitor._
 import oberon._
 
-class Function(name: String, args: List[Expression]) extends Expression{
+class Function(val name: String, val args: List[Expression]) extends Expression{
 
   override 
   def eval(): Value = {  
@@ -38,5 +38,7 @@ class Function(name: String, args: List[Expression]) extends Expression{
   override def accept(v : Visitor) {
     v.visit(this) 
   }
+
+  override def calculateType(): Type = UndefinedType()
 
 }

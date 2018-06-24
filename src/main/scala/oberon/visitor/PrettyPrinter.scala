@@ -119,28 +119,19 @@ class PrettyPrinter extends Visitor {
   def visit(e: VarDeclaration)        : Unit = { }
 
   def visit(c: ProcedureDeclaration): Unit = {
-    val define = lookupProcedure(c.name)
-    var strArgs = ""
-    val command = visitCommand(define.command)
+    var params = ""
+    var commands = visitCommand(c.command)
 
-    for(i <- 0 until define.params.size-1) {
-      strArgs += define.params(i)._1 + ","
-    }
-    strArgs += define.params(define.params.size-1)._1
+    c.params.foreach(param => params += param + ", ")
 
-    str = "function" + define.name + "(" + strArgs + ")" + "{" + command + "}"
+    str = "function " + c.name + "(" + params + ") {\n" + commands + "\n}"
   }
 
   def visit(d: Procedure): Unit = {
-    var strArgs = ""
-    val command = visitCommand(d.command)
+    var args = ""
+    d.args.foreach(arg => args += arg + ", ")
 
-    for(i <- 0 until d.params.size-1) {
-      strArgs += d.params(i)._1 + ","
-    }
-    strArgs += d.params(d.params.size-1)._1
-
-    str = "procedure " + d.name + "(" + strArgs + ")" + "{" + command + "}"
+    str = d.name + "(" + args + ")"
   }
 
 
@@ -161,29 +152,19 @@ class PrettyPrinter extends Visitor {
 
 
   def visit(d: Function): Unit = {
-    
-    var strArgs = ""
-    val command = visitCommand(d.command)
+    var args = ""
+    d.args.foreach(arg => args += arg + ", ")
 
-    for(i <- 0 until d.params.size-1) {
-      strArgs += d.params(i)._1 + ","
-    }
-    strArgs += d.params(d.params.size-1)._1
-
-    str = "function " + d.name + "(" + strArgs + ")" + "{" + command + "}" 
+    str = d.name + "(" + args + ")"
   }
 
   def visit(e: FunctionDeclaration): Unit = {
-    val define = lookupFunction(e.name)
-    var strArgs = ""
-    val command = visitCommand(define.command)
+    var params = ""
+    var commands = visitCommand(e.command)
 
-    for(i <- 0 until define.params.size-1) {
-      strArgs += define.params(i)._1 + ","
-    }
-    strArgs += define.params(define.params.size-1)._1
+    e.params.foreach(param => params += param + ", ")
 
-    str = "function" + define.name + "(" + strArgs + ")" + "{" + command + "}"
+    str = "function " + e.name + "(" + params + ") {\n" + commands + "\n}"
   }
 
 
