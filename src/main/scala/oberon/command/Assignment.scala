@@ -19,4 +19,6 @@ class Assignment(val id: String, val expression: Expression) extends Command {
     v.visit(this) 
   }
   
+  override def typeCheck(): Boolean = expression.typeCheck
+  
 }

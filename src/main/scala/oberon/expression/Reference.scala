@@ -17,5 +17,12 @@ class VarReference(val id: String) extends Expression {
     v.visit(this) 
   }
 
+  override def calculateType(): Type = {
+    lookup(id) match {
+      case Some(_var) => _var.calculateType
+      case _          => UndefinedType()
+    }
+  }
+
 }
 
