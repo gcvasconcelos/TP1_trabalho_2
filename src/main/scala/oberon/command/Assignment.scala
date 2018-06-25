@@ -1,7 +1,7 @@
 package oberon.command
 
-import oberon.expression.Expression
 import oberon.Environment._
+import oberon.expression._
 import oberon.visitor._
 import oberon._
 
@@ -15,10 +15,10 @@ class Assignment(val id: String, val expression: Expression) extends Command {
     }
   }
   
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
   
-  override def typeCheck(): Boolean = expression.typeCheck
+  override 
+  def typeCheck(): Boolean = expression.typeCheck
   
 }

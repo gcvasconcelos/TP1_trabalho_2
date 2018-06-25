@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 import oberon.command._
 import oberon.expression._
 import oberon.Environment._

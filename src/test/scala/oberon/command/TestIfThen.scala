@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 import oberon.command._
 import oberon.expression._
 import oberon.Environment._
@@ -76,4 +75,5 @@ class TestIfThen extends FlatSpec with Matchers with GivenWhenThen with BeforeAn
       case _       => 0 should be (1)
     }
   }
+  
 }

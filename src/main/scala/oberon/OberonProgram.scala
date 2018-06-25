@@ -5,11 +5,7 @@ import oberon.expression._
 import oberon.Environment._
 import oberon.visitor._
 
-class OberonProgram(val vars: List[VarDeclaration], 
-                    val procs: List[Procedure], 
-                    val funcs: List[Function],
-                    val cmds: Command
-                    ) extends Command {
+class OberonProgram(val vars: List[VarDeclaration], val procs: List[Procedure], val funcs: List[Function], val cmds: Command) extends Command {
 
   override
   def run() : Unit = {
@@ -19,10 +15,10 @@ class OberonProgram(val vars: List[VarDeclaration],
     cmds.run
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = cmds.typeCheck 
+  override 
+  def typeCheck(): Boolean = cmds.typeCheck 
 
 }

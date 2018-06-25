@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 class TestSubExpression extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
   behavior of "a subtraction expression"
@@ -20,4 +19,5 @@ class TestSubExpression extends FlatSpec with Matchers with GivenWhenThen with B
 
   it should "lead to an exception in Subtract(IntValue(5), BoolValue(False))" in {
   }
+
 }

@@ -1,18 +1,18 @@
 package oberon.visitor
 
+import oberon.Environment._
 import oberon.expression._
 import oberon.command._
-import oberon.Environment._
 import oberon._
 
 class PrettyPrinter extends Visitor {
   var str = ""
 
-  def visit(e: Undefined)     : Unit = { str = "undefined" } 
+  def visit(e: Undefined)     : Unit = str = "undefined"
 
-  def visit(e: IntValue)      : Unit = { str = e.value.toString }
+  def visit(e: IntValue)      : Unit = str = e.value.toString
 
-  def visit(e: BoolValue)     : Unit = { str = e.value.toString }
+  def visit(e: BoolValue)     : Unit = str = e.value.toString
 
   def visit(e: AddExpression) : Unit = {
     val (l, r) = visitBinExp(e)
@@ -64,12 +64,12 @@ class PrettyPrinter extends Visitor {
     str = "(" + l + " > " + r + ")" 
   }
 
-  def visit(e: NeqExpression)  : Unit = {
+  def visit(e: NeqExpression) : Unit = {
     val (l, r) = visitBinExp(e)
     str = "(" + l + " != " + r + ")" 
   }
 
-  def visit(e: AndExpression)  : Unit = {
+  def visit(e: AndExpression) : Unit = {
     val (l, r) = visitBinExp(e)
     str = "(" + l + " && " + r + ")" 
   }
@@ -79,12 +79,12 @@ class PrettyPrinter extends Visitor {
     str = "(" + l + " || " + r + ")" 
   }
 
-  def visit(e: NotExpression)  : Unit = {
+  def visit(e: NotExpression) : Unit = {
     val exp = visitExp(e)
     str = "!" + exp
   }
 
-  def visit(c: Return)  : Unit = {
+  def visit(c: Return)        : Unit = {
     val exp = visitCommand(c)
     str = "return " + exp
   }
@@ -93,7 +93,7 @@ class PrettyPrinter extends Visitor {
     c.cmds.foreach(cmd => str += visitCommand(cmd) + "\n")
   } 
 
-  def visit(c: Assignment): Unit = { 
+  def visit(c: Assignment)    : Unit = { 
     val exp = visitExp(c.expression)
     str = "var " + c.id + " = " + exp
   } 
@@ -114,9 +114,15 @@ class PrettyPrinter extends Visitor {
     
   }  
   
-  def visit(e: VarReference)        : Unit = { }
+  def visit(e: VarReference)  : Unit = { 
+    val exp = visitExp(e)
+    str = exp
+  }
   
-  def visit(e: VarDeclaration)        : Unit = { }
+  def visit(e: VarDeclaration): Unit = { 
+
+    // str = _type + " " + name
+  }
 
   def visit(c: ProcedureDeclaration): Unit = {
     var params = ""
@@ -134,7 +140,6 @@ class PrettyPrinter extends Visitor {
     str = d.name + "(" + args + ")"
   }
 
-
   def visit(c: IfThen): Unit = {
     val cond = visitExp(c.cond.asInstanceOf[BinExpression])
     val command = visitCommand(c.command)
@@ -149,7 +154,6 @@ class PrettyPrinter extends Visitor {
 
     str = "if" + cond + "{" + command + "}" + "\n" + "else" + "{" + elseCommand + "}"
   }
-
 
   def visit(d: Function): Unit = {
     var args = ""
@@ -167,8 +171,7 @@ class PrettyPrinter extends Visitor {
     str = "function " + e.name + "(" + params + ") {\n" + commands + "\n}"
   }
 
-
-  private def visitBinExp(e: BinExpression) : (String, String) = {
+  private def visitBinExp(e: BinExpression): (String, String) = {
     e.lhs.accept(this)
     val l = str
 

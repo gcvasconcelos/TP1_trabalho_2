@@ -1,7 +1,6 @@
 package oberon.expression
 
 import oberon.Environment._
-import oberon.command.Assignment
 import oberon.command._
 import oberon.visitor._
 import oberon._
@@ -36,11 +35,11 @@ class Function(val name: String, val args: List[Expression]) extends Expression{
     _return
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def calculateType(): Type = {
+  override 
+  def calculateType(): Type = {
     val function = lookupFunction(name) match {
       case Some(function) => function
       case _              => throw ProcedureNotDeclared()

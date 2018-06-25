@@ -10,17 +10,15 @@ import oberon.expression._
 import oberon.Environment._
 import oberon._
 
-
 class TestProcedure extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  behavior of "a procedure"
+  behavior of "a procedure command and declaration"
   
   before {
     clear
   }
 
   it should "result 2 when procedure: sum(1,1) is called" in {  
-
     val c1 = new VarDeclaration("res")
     val c2 = new Assignment("res", new AddExpression(new VarReference("x"), new VarReference("y")))
     val c3 = new BlockCommand(List(c1,c2))

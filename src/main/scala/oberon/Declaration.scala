@@ -14,26 +14,28 @@ class VarDeclaration(val id: String) extends Command {
     }
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = true
+  override 
+  def typeCheck(): Boolean = true
 
 } 
 
 class FunctionDeclaration(val returnType: Type,val name: String, val params: List[(Type, String)], val command: Command) extends Visitable {
+
   functionScope += ((returnType, name) -> this)
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
+
 }
 
 class ProcedureDeclaration(val name: String, val params: List[(Type, String)], val command: Command) extends Visitable {
+
   procedureScope += (name -> this)
   
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
+
 }

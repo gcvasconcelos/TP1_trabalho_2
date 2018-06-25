@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 class TestMultExpression extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
   behavior of "a multiplication expression"
@@ -20,4 +19,5 @@ class TestMultExpression extends FlatSpec with Matchers with GivenWhenThen with 
 
   it should "lead to an exception in Divide(IntValue(5), BoolValue(False))" in {
   }
+
 }

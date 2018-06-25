@@ -24,16 +24,20 @@ class Procedure(val name: String, val args: List[Expression]) extends Command {
     procedure.command.run
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = {
+  override 
+  def typeCheck(): Boolean = {
     var cond = true
 
     val procedure = lookupProcedure(name) match {
       case Some(procedure) => procedure
       case _ => throw ProcedureNotDeclared()
+    }
+
+    if (!procedure.command.typeCheck) {
+      cond = false
     }
 
     var i = 0

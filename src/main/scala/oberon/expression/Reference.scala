@@ -13,11 +13,11 @@ class VarReference(val id: String) extends Expression {
     }
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def calculateType(): Type = {
+  override 
+  def calculateType(): Type = {
     lookup(id) match {
       case Some(_var) => _var.calculateType
       case _          => UndefinedType()

@@ -18,11 +18,10 @@ class BlockCommand(val cmds: List[Command]) extends Command {
   }
 
   override 
-  def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = cmds.forall(cmd => cmd.typeCheck)
+  override 
+  def typeCheck(): Boolean = cmds.forall(cmd => cmd.typeCheck)
 
 }
 
@@ -38,27 +37,24 @@ class While(val cond: Expression, val command: Command) extends Command {
     }
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = {
-    cond.calculateType == BoolType() && command.typeCheck
-  }
+  override 
+  def typeCheck(): Boolean = cond.calculateType == BoolType() && command.typeCheck
 
 }
 
 class Print(val exp: Expression) extends Command {
+
   override
-  def run() : Unit = {
-    print(exp.eval())
-  }
+  def run() : Unit = print(exp.eval())
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
-
-  override def typeCheck(): Boolean = true
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
+  
+  override 
+  def typeCheck(): Boolean = true
 
 }
 
@@ -74,13 +70,11 @@ class IfThen(val cond: Expression, val command: Command) extends Command {
     }
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = {
-    cond.calculateType == BoolType() && command.typeCheck
-  }
+  override 
+  def typeCheck(): Boolean = cond.calculateType == BoolType() && command.typeCheck
 
 }
 
@@ -96,13 +90,11 @@ class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Co
     } 
   }
 
-  override def accept(v : Visitor) {
-    v.visit(this) 
-  }
+  override 
+  def accept(v : Visitor): Unit = v.visit(this) 
 
-  override def typeCheck(): Boolean = {
-    cond.calculateType == BoolType() && command.typeCheck && elseCommand.typeCheck
-  }
+  override 
+  def typeCheck(): Boolean = cond.calculateType == BoolType() && command.typeCheck && elseCommand.typeCheck
   
 }
 
@@ -111,8 +103,10 @@ case class Return(val expression: Expression) extends Command {
   override 
   def run() : Unit = { }
 
-  override def accept(v : Visitor): Unit = v.visit(this)
+  override 
+  def accept(v : Visitor): Unit = v.visit(this)
 
-  override def typeCheck(): Boolean = expression.typeCheck
+  override 
+  def typeCheck(): Boolean = expression.typeCheck
 
 }

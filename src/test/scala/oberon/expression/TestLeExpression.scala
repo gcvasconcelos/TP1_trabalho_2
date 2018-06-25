@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 class TestLeExpression extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
   behavior of "an lower or equal expression"

@@ -36,4 +36,5 @@ class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with Befo
       x.run
     } 
   }
+  
 }

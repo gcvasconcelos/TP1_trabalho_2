@@ -2,7 +2,6 @@ package oberon.visitor
 
 import oberon.expression._
 import oberon.command._
-import oberon.OberonProgram
 import oberon._
 
 
@@ -30,7 +29,6 @@ trait Visitor {
   def visit(e: NotExpression)       : Unit
   def visit(e: VarReference)        : Unit 
   def visit(e: Function)            : Unit
-  def visit(e: FunctionDeclaration) : Unit
 
   def visit(c: BlockCommand)        : Unit
   def visit(c: Assignment)          : Unit
@@ -41,8 +39,9 @@ trait Visitor {
   def visit(c: IfThen)              : Unit
   def visit(c: IfThenElse)          : Unit
   def visit(c: Procedure)           : Unit
-  def visit(c: ProcedureDeclaration): Unit
   
   def visit(c: VarDeclaration)      : Unit
+  def visit(e: FunctionDeclaration) : Unit
+  def visit(c: ProcedureDeclaration): Unit
 
 }

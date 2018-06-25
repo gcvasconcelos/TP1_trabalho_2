@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 class TestDivExpression extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
   behavior of "a division expression"
@@ -20,4 +19,5 @@ class TestDivExpression extends FlatSpec with Matchers with GivenWhenThen with B
 
   it should "lead to an exception in Divide(IntValue(5), BoolValue(False))" in {
   }
+  
 }

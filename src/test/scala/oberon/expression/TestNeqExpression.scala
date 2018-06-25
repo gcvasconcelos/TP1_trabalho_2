@@ -5,7 +5,6 @@ import org.scalatest.Matchers
 import org.scalatest.GivenWhenThen
 import org.scalatest.BeforeAndAfter
 
-
 class TestNeqExpression extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
   behavior of "a not equal expression"
@@ -26,4 +25,5 @@ class TestNeqExpression extends FlatSpec with Matchers with GivenWhenThen with B
 
     neq.eval() should be (BoolValue(false)) 
   }
+  
 }

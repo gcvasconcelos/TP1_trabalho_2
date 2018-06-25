@@ -11,7 +11,7 @@ import oberon._
 
 class TestFunction extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
-  behavior of "a function"
+  behavior of "a function expression and declaration"
 
   it should "return 2 when sum(1,1)" in {
     val r1 = new AddExpression(new VarReference("x"), new VarReference("y"))
@@ -44,4 +44,5 @@ class TestFunction extends FlatSpec with Matchers with GivenWhenThen with Before
 
     func1.eval() should be (IntValue(21))
   }
+  
 }
