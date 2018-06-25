@@ -15,10 +15,6 @@ class BlockCommand(val cmds: List[Command]) extends Command {
   
   override
   def run() : Unit = {
-    // if (!typeCheck) {
-    //   throw InvalidType()
-    // }
-
     cmds.foreach(cmd => cmd.run())
   }
 
@@ -77,9 +73,9 @@ class IfThen(val cond: Expression, val command: Command) extends Command {
   
   override 
   def run(): Unit = {
-    // if (!typeCheck) {
-    //   throw InvalidType()
-    // }
+    if (!typeCheck) {
+      throw InvalidType()
+    }
 
     val v = cond.eval.asInstanceOf[BoolValue]
 

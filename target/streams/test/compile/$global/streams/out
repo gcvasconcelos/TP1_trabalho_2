@@ -1,9 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestAssignment.scala:22:40: not enough arguments for method apply: (value: Integer)oberon.expression.IntValue in object IntValue.[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter value.[0m
-[0m[[0m[31merror[0m] [0m[0m    val x = new VarDeclaration(IntValue(),"x")[0m
-[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/expression/TestProcedure.scala:22:14: not enough arguments for constructor VarDeclaration: (returnType: oberon.expression.Type, name: String)oberon.VarDeclaration.[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter name.[0m
-[0m[[0m[31merror[0m] [0m[0m    val c1 = new VarDeclaration("res")[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestProcedure.scala:26:5: not found: value prinln[0m
+[0m[[0m[31merror[0m] [0m[0m    prinln(stack)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

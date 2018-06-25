@@ -19,7 +19,7 @@ class Assignment(val id: String, val expression: Expression) extends Command {
 
     val (_type, name) = variable
 
-    map(_type, name, expression.eval)
+    map(_type, id, expression.eval)
   }
   
   override 

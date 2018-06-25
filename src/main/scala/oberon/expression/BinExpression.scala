@@ -16,7 +16,7 @@ class AddExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs,
 
   override 
   def accept(v : Visitor): Unit = v.visit(this) 
-
+  
   override 
   def calculateType(): Type = {
     List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {

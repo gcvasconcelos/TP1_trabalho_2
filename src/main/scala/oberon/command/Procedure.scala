@@ -9,10 +9,6 @@ class Procedure(val name: String, val args: List[Expression]) extends Command {
 
   override 
   def run(): Unit = {
-    // if (!typeCheck) {
-    //   throw InvalidType()
-    // }
-
     val procedure = lookupProcedure(name) match {
       case Some(procedure) => procedure
       case _               => throw ProcedureNotDeclared() 
@@ -39,7 +35,6 @@ class Procedure(val name: String, val args: List[Expression]) extends Command {
       case Some(procedure) => procedure
       case _ => throw ProcedureNotDeclared()
     }
-
     if (!procedure.command.typeCheck) {
       cond = false
     }

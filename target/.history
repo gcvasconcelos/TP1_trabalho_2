@@ -62,3 +62,17 @@ testOnly *TestWhile
 test
 testOnly *TestIfThen
 test
+compile
+test
+testOnly *TestIfThen
+por favor funciona
+test
+testOnly *TestIfThen
+test
+testOnly *TestIfThen
+test
+testOnly *TestIfThen
+test
+testOnly *TestPocedure
+testOnly *TestProcedure
+test

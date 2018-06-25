@@ -1,4 +1,16 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mTestIfThen:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32man if then command[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should lookup(soma) must be equal to 10[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should lookup(soma) must be equal to 15[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should lookup(soma) must be equal to 15 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  oberon.InvalidType:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.command.IfThen.run(Command.scala:81)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.command.TestIfThen.$anonfun$new$3(TestIfThen.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike$$anon$1.apply(FlatSpecLike.scala:1682)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m

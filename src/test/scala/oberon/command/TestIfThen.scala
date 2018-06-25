@@ -63,9 +63,12 @@ class TestIfThen extends FlatSpec with Matchers with GivenWhenThen with BeforeAn
 
     val d4 = new VarDeclaration(IntType(), "res")
     d4.run
-    
+
     val a4 = new Assignment("res", new AddExpression(new VarReference("val5"), new VarReference("val10")))    
+    a4.run
+
     val a5 = new Assignment("soma", new AddExpression(new VarReference("soma"), new VarReference("res")))
+    
     val cond = new LoExpression(new VarReference("val5"), new VarReference("val10"))
     val c1 = new IfThen(cond, new BlockCommand(List(a4, a5)))
     c1.run
