@@ -35,3 +35,19 @@ compile
 test
 compile
 test
+compile
+test
+testOnly TestProcedure
+test-only TestProcedure
+testOnly
+testOnly TestIfThen
+testOnly *TestProcedure
+test
+testOnly *TestProcedure
+test
+testOnly *TestFunction
+test
+compile
+test
+compile
+test

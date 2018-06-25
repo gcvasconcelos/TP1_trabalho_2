@@ -1,0 +1,4 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestAssignment:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32man assignment command[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should change inicial value of variable[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should throw an error when variable wasn't declared[0m[0m

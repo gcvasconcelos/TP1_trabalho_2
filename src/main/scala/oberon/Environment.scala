@@ -4,14 +4,14 @@ import scala.collection.mutable.Stack
 import scala.collection.mutable.Map
 import scala.collection.mutable.HashMap
 
-import oberon.expression.Value
-import oberon.expression.Expression
+import oberon.expression._
+import oberon.command._
 import oberon.visitor._
 import oberon._
 
 object Environment {
   var stack = new Stack[Map[String, Value]] 
-  var functionScope = new HashMap[String, FunctionDeclaration]
+  var functionScope = new HashMap[(Type, String), FunctionDeclaration]
   var procedureScope = new HashMap[String, ProcedureDeclaration]
 
   def push() {
@@ -37,16 +37,22 @@ object Environment {
   }
 
   def lookupFunction(id: String) : Option[FunctionDeclaration] = {
-    functionScope(id) match {
-      case value: FunctionDeclaration => Some(value)
-      case _     => None
-    }  
+    var found: Option[FunctionDeclaration] = None
+
+    functionScope.foreach { function =>
+      val (keys, funct) = function
+      val (_type, name) = keys
+      if (name == id) {
+        found  = Some(funct)
+      }
+    }
+    found 
   }
 
   def lookupProcedure(id: String) : Option[ProcedureDeclaration] = {
     procedureScope(id) match {
       case value: ProcedureDeclaration => Some(value) 
-      case _     => None
+      case _                           => None
     }  
   }
 

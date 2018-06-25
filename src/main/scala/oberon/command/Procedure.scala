@@ -13,21 +13,38 @@ class Procedure(val name: String, val args: List[Expression]) extends Command {
       case Some(procedure) => procedure
       case _               => throw ProcedureNotDeclared() 
     }
-
+    
     var i = 0
     args.foreach { arg => 
-      new VarDeclaration(procedure.params(i)).run
-      new Assignment(procedure.params(i), arg).run
+      val (_type, _var) = procedure.params(i)
+      new VarDeclaration(_var).run
+      new Assignment(_var, arg).run
       i = i + 1
     }
     procedure.command.run
-
   }
 
   override def accept(v : Visitor) {
     v.visit(this) 
   }
 
-  override def typeCheck(): Boolean = true
+  override def typeCheck(): Boolean = {
+    var cond = true
+
+    val procedure = lookupProcedure(name) match {
+      case Some(procedure) => procedure
+      case _ => throw ProcedureNotDeclared()
+    }
+
+    var i = 0
+    args.foreach { arg =>
+      val (_type, _var) = procedure.params(i)
+      if (_type == arg.calculateType) {
+        cond = false
+      }
+      i = i + 1
+    }
+    cond
+  }
   
 }

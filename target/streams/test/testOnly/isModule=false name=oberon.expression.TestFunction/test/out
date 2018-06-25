@@ -1,0 +1,5 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestFunction:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32ma function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return 2 when sum(1,1)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the correct value with multiple commands in function declaration[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the correct value with a while command in function declaration[0m[0m

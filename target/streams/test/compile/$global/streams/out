@@ -1,7 +1,12 @@
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestIfThen.scala:44:28: oberon.expression.Value does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m      case Some(map) => map("soma") should be (IntValue(10))[0m
-[0m[[0m[31merror[0m] [0m[0m                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/expression/TestProcedure.scala:32:30: oberon.expression.Value does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m        case Some(map) => map("res") should be (IntValue(2))[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/expression/TestFunction.scala:18:14: not enough arguments for constructor FunctionDeclaration: (returnType: oberon.expression.Type, name: String, params: List[(oberon.expression.Type, String)], command: oberon.command.Command)oberon.FunctionDeclaration.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter command.[0m
+[0m[[0m[31merror[0m] [0m[0m    val d1 = new FunctionDeclaration("sum", List((IntType(), "x"), (IntType(), "y")), new Return(r1))    [0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/expression/TestFunction.scala:28:14: not enough arguments for constructor FunctionDeclaration: (returnType: oberon.expression.Type, name: String, params: List[(oberon.expression.Type, String)], command: oberon.command.Command)oberon.FunctionDeclaration.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter command.[0m
+[0m[[0m[31merror[0m] [0m[0m    val fd = new FunctionDeclaration("summult", List((IntType(), "x"), (IntType(), "y")), new BlockCommand(List(ass1, ass2, new Return(ret1))))[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/expression/TestFunction.scala:41:14: not enough arguments for constructor FunctionDeclaration: (returnType: oberon.expression.Type, name: String, params: List[(oberon.expression.Type, String)], command: oberon.command.Command)oberon.FunctionDeclaration.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter command.[0m
+[0m[[0m[31merror[0m] [0m[0m    val fd = new FunctionDeclaration("while", List((IntType(), "x"), (IntType(), "soma")), new BlockCommand(List(w1, Return(ret1))) )[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m

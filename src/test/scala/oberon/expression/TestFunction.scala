@@ -15,7 +15,7 @@ class TestFunction extends FlatSpec with Matchers with GivenWhenThen with Before
 
   it should "return 2 when sum(1,1)" in {
     val r1 = new AddExpression(new VarReference("x"), new VarReference("y"))
-    val d1 = new FunctionDeclaration("sum", List("x", "y"), new Return(r1))    
+    val d1 = new FunctionDeclaration(IntType(),"sum", List((IntType(), "x"), (IntType(), "y")), new Return(r1))    
     val f1 = new Function("sum", List(IntValue(1), IntValue(1)))
 
     f1.eval() should be (IntValue(2))
@@ -25,7 +25,7 @@ class TestFunction extends FlatSpec with Matchers with GivenWhenThen with Before
     val ret1 = new AddExpression(new VarReference("x"), new VarReference("y"))
     val ass1 = new Assignment("x", new AddExpression(new VarReference("x"), IntValue(1)))
     val ass2 = new Assignment("y", new SubExpression(new VarReference("y"), new VarReference("x")))
-    val fd = new FunctionDeclaration("summult", List("x", "y"), new BlockCommand(List(ass1, ass2, new Return(ret1))))
+    val fd = new FunctionDeclaration(IntType(),"summult", List((IntType(), "x"), (IntType(), "y")), new BlockCommand(List(ass1, ass2, new Return(ret1))))
     
     val func1 = new Function("summult", List(IntValue(2), IntValue(4)))
 
@@ -38,7 +38,7 @@ class TestFunction extends FlatSpec with Matchers with GivenWhenThen with Before
     val a4 = new Assignment("x", new AddExpression(new VarReference("x"), IntValue(1)) )
     val cond = new LeExpression(new VarReference("x"), IntValue(5))
     val w1 = new While(cond, new BlockCommand(List(a3, a4)) )
-    val fd = new FunctionDeclaration("while", List("x", "soma"), new BlockCommand(List(w1, Return(ret1))) )
+    val fd = new FunctionDeclaration(IntType(),"while", List((IntType(), "x"), (IntType(), "soma")), new BlockCommand(List(w1, Return(ret1))) )
     
     val func1 = new Function("while", List(IntValue(1), IntValue(0)))
 

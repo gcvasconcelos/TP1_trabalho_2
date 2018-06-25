@@ -1,0 +1,6 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestOrExpression:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32man or expression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true in Or(true, true)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true in Or(true, false)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true in Or(false, true)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false in Or(false, false)[0m[0m
