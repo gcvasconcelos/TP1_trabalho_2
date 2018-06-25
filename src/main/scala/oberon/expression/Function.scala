@@ -18,7 +18,7 @@ class Function(val name: String, val args: List[Expression]) extends Expression{
     var i = 0
     args.foreach { arg => 
       val (_type, _var) = function.params(i)
-      new VarDeclaration(_var).run
+      new VarDeclaration(_type, _var).run
       new Assignment(_var, arg).run
       i = i + 1
     }

@@ -19,7 +19,7 @@ class TestDeclaration extends FlatSpec with Matchers with GivenWhenThen with Bef
   }
 
   it should "declare a variable and initialize it with undefined value" in { 
-    val x = new VarDeclaration("x")
+    val x = new VarDeclaration(IntType(), "x")
     x.run()
 
     lookup("x") match {
@@ -30,9 +30,9 @@ class TestDeclaration extends FlatSpec with Matchers with GivenWhenThen with Bef
 
   it should "throw an error when two declarations of the same variable" in { 
     a [VariableAlreadyDeclared] should be thrownBy {
-      val x = new VarDeclaration("x")
+      val x = new VarDeclaration(IntType(), "x")
       x.run()
-      val otherx = new VarDeclaration("x")
+      val otherx = new VarDeclaration(IntType(), "x")
       x.run()
     } 
   }

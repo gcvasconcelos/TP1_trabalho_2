@@ -9,3 +9,5 @@ case class FunctionNotDeclared(private val message: String = "", private val cau
 case class ProcedureNotDeclared(private val message: String = "", private val cause: Throwable = None.orNull) extends Exception(message, cause)
 
 case class ReturnNotFound(private val message: String = "", private val cause: Throwable = None.orNull) extends Exception(message, cause)
+
+case class InvalidType(private val message: String = "", private val cause: Throwable = None.orNull) extends Exception(message, cause)

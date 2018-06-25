@@ -53,3 +53,12 @@ compile
 test
 compile
 test
+compile
+test
+compile
+test
+testOnly TestWhile
+testOnly *TestWhile
+test
+testOnly *TestIfThen
+test

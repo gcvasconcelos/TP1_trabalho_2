@@ -8,17 +8,36 @@ import oberon._
 class Assignment(val id: String, val expression: Expression) extends Command {
 
   override
-  def run() : Unit = {
-    lookup(id) match {
-      case Some(_var) => map(id, expression.eval) 
-      case None      => throw VariableNotDeclared()
+  def run(): Unit = {
+    if (!typeCheck) {
+      throw InvalidType()
     }
+    val variable = lookupVariable(id) match {
+      case Some(_var) => _var
+      case None       => throw VariableNotDeclared()
+    }
+
+    val (_type, name) = variable
+
+    map(_type, name, expression.eval)
   }
   
   override 
   def accept(v : Visitor): Unit = v.visit(this) 
   
   override 
-  def typeCheck(): Boolean = expression.typeCheck
+  def typeCheck(): Boolean = {
+    var cond = true
+
+    val variable = lookupVariable(id) match {
+      case Some(_var) => _var
+      case None       => throw VariableNotDeclared()
+    }
+    val (_type, name) = variable
+    if (expression.calculateType != _type) {
+      cond = false
+    }
+    cond
+  }
   
 }

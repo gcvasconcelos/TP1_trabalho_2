@@ -5,11 +5,11 @@ import oberon.expression._
 import oberon.command._
 import oberon.visitor._
 
-class VarDeclaration(val id: String) extends Command {
+class VarDeclaration(val returnType: Type, val name: String) extends Command {
 
   def run() : Unit = {
-    lookup(id) match {
-      case None => map(id, Undefined()) 
+    lookup(name) match {
+      case None => map(returnType, name, Undefined()) 
       case _    => throw VariableAlreadyDeclared()
     }
   }
@@ -22,7 +22,7 @@ class VarDeclaration(val id: String) extends Command {
 
 } 
 
-class FunctionDeclaration(val returnType: Type,val name: String, val params: List[(Type, String)], val command: Command) extends Visitable {
+class FunctionDeclaration(val returnType: Type, val name: String, val params: List[(Type, String)], val command: Command) extends Visitable {
 
   functionScope += ((returnType, name) -> this)
 

@@ -19,7 +19,7 @@ class TestProcedure extends FlatSpec with Matchers with GivenWhenThen with Befor
   }
 
   it should "result 2 when procedure: sum(1,1) is called" in {  
-    val c1 = new VarDeclaration("res")
+    val c1 = new VarDeclaration(IntType(), "res")
     val c2 = new Assignment("res", new AddExpression(new VarReference("x"), new VarReference("y")))
     val c3 = new BlockCommand(List(c1,c2))
     val p1 = new ProcedureDeclaration("sum", List((IntType(),"x"),(IntType(),"y")), c3)

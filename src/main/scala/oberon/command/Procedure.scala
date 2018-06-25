@@ -8,7 +8,11 @@ import oberon._
 class Procedure(val name: String, val args: List[Expression]) extends Command {
 
   override 
-  def run(): Unit = {  
+  def run(): Unit = {
+    // if (!typeCheck) {
+    //   throw InvalidType()
+    // }
+
     val procedure = lookupProcedure(name) match {
       case Some(procedure) => procedure
       case _               => throw ProcedureNotDeclared() 
@@ -17,7 +21,7 @@ class Procedure(val name: String, val args: List[Expression]) extends Command {
     var i = 0
     args.foreach { arg => 
       val (_type, _var) = procedure.params(i)
-      new VarDeclaration(_var).run
+      new VarDeclaration(_type, _var).run
       new Assignment(_var, arg).run
       i = i + 1
     }

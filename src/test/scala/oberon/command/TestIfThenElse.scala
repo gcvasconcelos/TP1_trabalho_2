@@ -19,22 +19,22 @@ class TestIfThenElse extends FlatSpec with Matchers with GivenWhenThen with Befo
   }
 
   it should "lookup(result) must be equal to 5" in {
-    val d1 = new VarDeclaration("soma")
+    val d1 = new VarDeclaration(IntType(), "soma")
     d1.run
     val a1 = new Assignment("soma", IntValue(0))   
     a1.run
     
-    val d2 = new VarDeclaration("val5")
+    val d2 = new VarDeclaration(IntType(), "val5")
     d2.run
     val a2 = new Assignment("val5", IntValue(5))   
     a2.run
 
-    val d3 = new VarDeclaration("val10")
+    val d3 = new VarDeclaration(IntType(), "val10")
     d3.run
     val a3 = new Assignment("val10", IntValue(10))      
     a3.run
 
-    val d4 = new VarDeclaration("result")
+    val d4 = new VarDeclaration(IntType(), "result")
     d4.run
     val a4 = new Assignment("result", new AddExpression(new VarReference("val5"), new VarReference("val10")))
     val a5 = new Assignment("result", new SubExpression(new VarReference("val10"), new VarReference("val5")))

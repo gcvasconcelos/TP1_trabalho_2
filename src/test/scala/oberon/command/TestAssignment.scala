@@ -19,13 +19,13 @@ class TestAssignment extends FlatSpec with Matchers with GivenWhenThen with Befo
   }
 
   it should "change inicial value of variable" in { 
-    val x = new VarDeclaration("x")
+    val x = new VarDeclaration(IntType(), "x")
     x.run
     val newx = new Assignment("x", IntValue(5))
     newx.run
 
     lookup("x") match {
-      case Some(_var) => _var should be (IntValue(5)) 
+      case Some(_var) => _var should be (IntValue(5))
       case _         => 1 should be (0)
     }
   }

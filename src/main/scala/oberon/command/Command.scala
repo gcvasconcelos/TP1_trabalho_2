@@ -3,6 +3,7 @@ package oberon.command
 import oberon.Environment._
 import oberon.expression._
 import oberon.visitor._
+import oberon._
 
 
 trait Command extends Visitable{
@@ -14,6 +15,10 @@ class BlockCommand(val cmds: List[Command]) extends Command {
   
   override
   def run() : Unit = {
+    // if (!typeCheck) {
+    //   throw InvalidType()
+    // }
+
     cmds.foreach(cmd => cmd.run())
   }
 
@@ -21,7 +26,7 @@ class BlockCommand(val cmds: List[Command]) extends Command {
   def accept(v : Visitor): Unit = v.visit(this) 
 
   override 
-  def typeCheck(): Boolean = cmds.forall(cmd => cmd.typeCheck)
+  def typeCheck(): Boolean = cmds.forall (cmd => cmd.typeCheck)
 
 }
 
@@ -29,6 +34,10 @@ class While(val cond: Expression, val command: Command) extends Command {
 
   override
   def run() : Unit = {
+    if (!typeCheck) {
+      throw InvalidType()
+    }
+
     val v = cond.eval.asInstanceOf[BoolValue]
 
     v match {
@@ -48,7 +57,13 @@ class While(val cond: Expression, val command: Command) extends Command {
 class Print(val exp: Expression) extends Command {
 
   override
-  def run() : Unit = print(exp.eval())
+  def run() : Unit = {
+    if (!typeCheck) {
+      throw InvalidType()
+    }
+
+    print(exp.eval())
+  }
 
   override 
   def accept(v : Visitor): Unit = v.visit(this) 
@@ -62,6 +77,10 @@ class IfThen(val cond: Expression, val command: Command) extends Command {
   
   override 
   def run(): Unit = {
+    // if (!typeCheck) {
+    //   throw InvalidType()
+    // }
+
     val v = cond.eval.asInstanceOf[BoolValue]
 
     v match {
@@ -74,7 +93,9 @@ class IfThen(val cond: Expression, val command: Command) extends Command {
   def accept(v : Visitor): Unit = v.visit(this) 
 
   override 
-  def typeCheck(): Boolean = cond.calculateType == BoolType() && command.typeCheck
+  def typeCheck(): Boolean = {
+    cond.calculateType == BoolType() && command.typeCheck
+  }
 
 }
 
@@ -82,6 +103,10 @@ class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Co
 
   override 
   def run(): Unit = {
+    if (!typeCheck) {
+      throw InvalidType()
+    }
+
     val v = cond.eval.asInstanceOf[BoolValue]
 
     v match {
@@ -101,7 +126,11 @@ class IfThenElse(val cond: Expression, val command: Command, val elseCommand: Co
 case class Return(val expression: Expression) extends Command {
 
   override 
-  def run() : Unit = { }
+  def run() : Unit = {
+    if (!typeCheck) {
+      throw InvalidType()
+    }
+  }
 
   override 
   def accept(v : Visitor): Unit = v.visit(this)

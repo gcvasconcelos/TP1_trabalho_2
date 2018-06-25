@@ -182,7 +182,7 @@ class LeExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
   override 
   def calculateType(): Type = {
     List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
-      case true => IntType()
+      case true => BoolType()
       case _    => UndefinedType() 
     }
   }
@@ -205,7 +205,7 @@ class GeExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
   override 
   def calculateType(): Type = {
     List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
-      case true => IntType()
+      case true => BoolType()
       case _    => UndefinedType() 
     }
   }
@@ -228,7 +228,7 @@ class LoExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
   override 
   def calculateType(): Type = {
     List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
-      case true => IntType()
+      case true => BoolType()
       case _    => UndefinedType() 
     }
   }
@@ -251,7 +251,7 @@ class GrExpression(lhs: Expression, rhs: Expression) extends BinExpression(lhs, 
   override 
   def calculateType(): Type = {
     List(lhs, rhs).forall(foo => foo.calculateType == IntType()) match {
-      case true => IntType()
+      case true => BoolType()
       case _    => UndefinedType() 
     }
   }
@@ -322,6 +322,6 @@ class NotExpression(value: Expression) extends Expression {
       case true => BoolType()
       case _    => UndefinedType() 
     }
-  }
+  } 
 
 }

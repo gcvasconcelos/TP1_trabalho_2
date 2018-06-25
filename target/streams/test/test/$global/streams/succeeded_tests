@@ -1,24 +1,24 @@
 #Successful Tests
-#Mon Jun 25 13:47:26 BRT 2018
-oberon.command.TestIfThenElse=1529945246518
-oberon.expression.TestAddExpression=1529945246345
-oberon.expression.TestExpression=1529945246322
-oberon.expression.TestMultExpression=1529945246375
-oberon.command.TestDeclaration=1529945246400
-oberon.command.TestAssignment=1529945246296
-oberon.command.TestIfThen=1529945246506
-oberon.expression.TestLoExpression=1529945246389
-oberon.expression.TestGrExpression=1529945246479
-oberon.expression.TestEqExpression=1529945246311
-oberon.command.TestProcedure=1529945246235
-oberon.command.TestWhile=1529945246219
-oberon.expression.TestGeExpression=1529945246425
-oberon.expression.TestNotExpression=1529945246447
-oberon.expression.TestSubExpression=1529945246363
-oberon.command.TestOberonProgram=1529945246354
-oberon.expression.TestDivExpression=1529945246335
-oberon.expression.TestAndExpression=1529945246277
-oberon.expression.TestOrExpression=1529945246412
-oberon.expression.TestFunction=1529945246258
-oberon.expression.TestNeqExpression=1529945246491
-oberon.expression.TestLeExpression=1529945246463
+#Mon Jun 25 16:59:08 BRT 2018
+oberon.command.TestIfThenElse=1529956748108
+oberon.expression.TestAddExpression=1529956747904
+oberon.expression.TestExpression=1529956747865
+oberon.expression.TestMultExpression=1529956747952
+oberon.command.TestDeclaration=1529956747986
+oberon.command.TestAssignment=1529956747831
+oberon.command.TestIfThen=1529956748094
+oberon.expression.TestLoExpression=1529956747969
+oberon.expression.TestGrExpression=1529956748061
+oberon.expression.TestEqExpression=1529956747851
+oberon.command.TestProcedure=1529956747751
+oberon.command.TestWhile=1529956747583
+oberon.expression.TestGeExpression=1529956748014
+oberon.expression.TestNotExpression=1529956748027
+oberon.expression.TestSubExpression=1529956747933
+oberon.command.TestOberonProgram=1529956747917
+oberon.expression.TestDivExpression=1529956747887
+oberon.expression.TestAndExpression=1529956747809
+oberon.expression.TestOrExpression=1529956748001
+oberon.expression.TestFunction=1529956747786
+oberon.expression.TestNeqExpression=1529956748075
+oberon.expression.TestLeExpression=1529956748042

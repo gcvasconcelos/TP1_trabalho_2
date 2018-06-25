@@ -10,33 +10,56 @@ import oberon.visitor._
 import oberon._
 
 object Environment {
-  var stack = new Stack[Map[String, Value]] 
+  var stack = new Stack[Map[(Type, String), Value]] 
   var functionScope = new HashMap[(Type, String), FunctionDeclaration]
   var procedureScope = new HashMap[String, ProcedureDeclaration]
 
-  def push() {
-    stack.push(new HashMap[String, Value])
-  }
+  def push(): Unit = stack.push(new HashMap[(Type, String), Value])
 
-  def pop(): Map[String, Value] = {
-    stack.pop
-  }
+  def pop(): Map[(Type, String), Value] = stack.pop
 
-  def map(id: String, value: Value) {
+  def map(_type: Type, name: String, value: Value): Unit = {
     if(stack.isEmpty) {
       push()
     }
-    stack.top += (id -> value) 
+    stack.top += ((_type, name) -> value) 
   }
 
-  def lookup(id: String) : Option[Value] = {
-    stack.isEmpty match {
-      case true => None
-      case _    => stack.top.lift(id)
+  def lookup(id: String): Option[Value] = {
+    if (stack.isEmpty) {
+      return None
     }
+
+    var found: Option[Value] = None
+
+    stack.top.foreach { variable =>
+      val (keys, value) = variable
+      val (_type, name) = keys
+      if (name == id) {
+        found = Some(value)
+      }
+    }
+    found
   }
 
-  def lookupFunction(id: String) : Option[FunctionDeclaration] = {
+  def lookupVariable(id: String): Option[(Type, String)] = {
+    if (stack.isEmpty) {
+      return None
+    }
+
+    var found: Option[(Type, String)] = None
+    
+    stack.top.foreach { variable =>
+      val (keys, value) = variable
+      val (_type, name) = keys
+      if (name == id) {
+        found = Some(keys)
+      }
+    }
+    found
+  }
+
+  def lookupFunction(id: String): Option[FunctionDeclaration] = {
     var found: Option[FunctionDeclaration] = None
 
     functionScope.foreach { function =>
@@ -49,7 +72,7 @@ object Environment {
     found 
   }
 
-  def lookupProcedure(id: String) : Option[ProcedureDeclaration] = {
+  def lookupProcedure(id: String): Option[ProcedureDeclaration] = {
     procedureScope(id) match {
       case value: ProcedureDeclaration => Some(value) 
       case _                           => None
@@ -57,5 +80,5 @@ object Environment {
   }
 
 
-  def clear() : Unit = stack.clear() 
+  def clear(): Unit = stack.clear() 
 }
