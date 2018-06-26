@@ -1,3 +1,4 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mTestNeqExpression:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32ma not equal expression[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return value true when Neq(IntValue(2), IntValue(1))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return value false when Neq(IntValue(2), IntValue(2))[0m[0m

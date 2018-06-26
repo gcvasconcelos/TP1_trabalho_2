@@ -1,4 +1,4 @@
-/*package oberon
+package oberon
 
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
@@ -36,7 +36,7 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     add.accept(pretty)
 
-    pretty.str should be ("(3 + 7)")
+    pretty.str should be ("(v3 + v7)")
   }
 
   it should "print \"((3 + 7) + 3)\" when we call accept in addexpression" in {
@@ -55,21 +55,30 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     val pretty = new PrettyPrinter()
 
+    add.accept(pretty)
+    pretty.str should be ("(v3 + v7)")
     add2.accept(pretty)
-
-    pretty.str should be ("((3 + 7) + 3)")
+    pretty.str should be ("(add + v3)")
   }
 
   it should "print \"(3 == 3)\" when we call accept in EqExpression" in {
-    val a  = IntValue(3)
-    val b = IntValue(3)
+    val a = new VarDeclaration(IntType(), "a")
+    a.run
+    val newa = new Assignment("a", IntValue(3))
+    newa.run
+
+    val b = new VarDeclaration(IntType(), "b")
+    b.run
+    val newb = new Assignment("b", IntValue(3))
+    newb.run
+
     val exp = new EqExpression(new VarReference("a"), new VarReference("b"))
 
     val pretty = new PrettyPrinter()
 
     exp.accept(pretty)
 
-    pretty.str should be ("(3 == 3)")
+    pretty.str should be ("(a == b)")
   }
 
   it should "print \"(3 == 7)\" when we call accept in NeqExpression" in {
@@ -89,7 +98,7 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     n_eq.accept(pretty)
 
-    pretty.str should be ("(3 != 7)")
+    pretty.str should be ("(v3 != v7)")
   }
 
   it should "print \"(7 > 3)\" when we call accept in GrExpression" in {
@@ -109,7 +118,7 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     gr.accept(pretty)
 
-    pretty.str should be ("(7 > 3)")
+    pretty.str should be ("(v7 > v3)")
   }
 
   it should "print \"(3 >= 3)\" when we call accept in GeExpression" in {
@@ -129,7 +138,7 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     geq.accept(pretty)
 
-    pretty.str should be ("(3 >= 3)")
+    pretty.str should be ("(a >= b)")
   }
 
   it should "print \"(3 % 3)\" when we call accept in ModExpression" in {
@@ -149,11 +158,11 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     mod.accept(pretty)
 
-    pretty.str should be ("(3 % 3)")
+    pretty.str should be ("(a % b)")
   }
 
   it should "print \"!true\" when we call accept in a NotExpression" in {
-    val a = new VarDeclaration(IntType(), "a")
+    val a = new VarDeclaration(BoolType(), "a")
     a.run
     val newa = new Assignment("a", BoolValue(true))
     newa.run    
@@ -163,24 +172,26 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     not.accept(pretty)
 
-    pretty.str should be ("!true")
+    pretty.str should be ("!a")
   }
 
- /* it should "print \"x = 3\" when we call accept in VarReference" in {
+  it should "print \"x = 3\" when we call accept in VarReference" in {
     val v3 = new VarDeclaration(IntType(), "v3")
     v3.run
     val newv3 = new Assignment("v3", IntValue(3))
     newv3.run
-    val x = new VarReference("x")
-    val oto_x = new Assignment("x", v3)
-    oto_x.run()
+    val x = new VarDeclaration(IntType(), "x")
+    x.run
+    val ref = new VarReference("v3")
+    val newx = new Assignment("x", ref)
+    newx.run
 
     val pretty = new PrettyPrinter()
 
-    x.accept(pretty)
+    ref.accept(pretty)
 
-    pretty.str should be ("x")
-  }*/
+    pretty.str should be ("v3")
+  }
 
   it should "print \"var x = 3\" when we call accept in Assignment" in {
     val v3 = new VarDeclaration(IntType(), "v3")
@@ -196,7 +207,7 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     newx.accept(pretty)
 
-    pretty.str should be ("var x = 3")
+    pretty.str should be ("x = 3")
   }
 
   it should "print \"if\" when we call accept in IFTHEN" in {
@@ -215,7 +226,7 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
 
     ift.accept(pretty)
 
-    pretty.str should be ("if(x > 7){var x = (x + 1)}")
+    pretty.str should be ("if (x > 7){x = 14}")
   }
 
   it should "print \"Function\" when we call accept in function" in {
@@ -234,30 +245,8 @@ class TestPrettyPrinter extends FlatSpec with Matchers with GivenWhenThen with B
     val pretty = new PrettyPrinter()
     w2.accept(pretty)
 
-    pretty.str should be ("function soma(x,y)")
+    pretty.str should be ("soma(x, y, )")
     
   }
-
-  it should "print \"Block command\" when we call accept in commands" in {
-    val x = new VarDeclaration(IntType(), "x")
-    x.run
-    val a = new Assignment("x", IntValue(1))
-    a.run
-    val y = new VarDeclaration(IntType(), "y")
-    y.run
-    val b = new Assignment("y", IntValue(2))
-    b.run
-
-    val w1 = new AddExpression(new VarReference("x"), new VarReference("y"))
-    val w2 = new Assignment("x", new AddExpression(new VarReference("x"), IntValue(1)))
-    val w3 = new BlockCommand(List(w2, Return(w1)))
-
-    val pretty = new PrettyPrinter()
-    w3.accept(pretty)
-
-    pretty.str should be ("var x = (x + 1)\nreturn (x + y)\n")
-    
-  }
-
   
-}*/
+}

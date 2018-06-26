@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/main/scala/oberon/visitor/PrettyPrinter.scala:124:20: not found: value c[0m
-[0m[[0m[31merror[0m] [0m[0m    str = "var " + c.name[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/main/scala/oberon/visitor/PrettyPrinter.scala:157:32: value += is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    d.args.foreach(arg => args += visitExp(arg.id) + ", ")[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

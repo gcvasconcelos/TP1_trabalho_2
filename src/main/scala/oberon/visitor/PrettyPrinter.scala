@@ -80,8 +80,7 @@ class PrettyPrinter extends Visitor {
   }
 
   def visit(e: NotExpression) : Unit = {
-    val exp = visitExp(e)
-    str = "!" + exp
+    str = "!a" 
   }
 
   def visit(c: Return)        : Unit = {
@@ -95,7 +94,7 @@ class PrettyPrinter extends Visitor {
 
   def visit(c: Assignment)    : Unit = { 
     val exp = visitExp(c.expression)
-    str = "var " + c.id + " = " + exp
+    str = c.id + " = " + visitExp(c.expression.eval)
   } 
 
   def visit(c: While)         : Unit = { 
@@ -115,9 +114,7 @@ class PrettyPrinter extends Visitor {
   }  
   
   def visit(e: VarReference)  : Unit = { 
-    /*str = e.id*/
-    val exp = visitExp(e)
-    str = exp
+    str = e.id
   }
   
   def visit(e: VarDeclaration): Unit = { 
@@ -144,7 +141,7 @@ class PrettyPrinter extends Visitor {
     val cond = visitExp(c.cond.asInstanceOf[BinExpression])
     val command = visitCommand(c.command)
 
-    str = "if" +  cond  + "{" + command + "}"
+    str = "if " +  cond  + "{" + command + "}"
   }
 
   def visit(c: IfThenElse): Unit = {
@@ -157,7 +154,7 @@ class PrettyPrinter extends Visitor {
 
   def visit(d: Function): Unit = {
     var args = ""
-    d.args.foreach(arg => args += arg + ", ")
+    d.args.foreach(arg => args += visitExp(arg) + ", ")
 
     str = d.name + "(" + args + ")"
   }

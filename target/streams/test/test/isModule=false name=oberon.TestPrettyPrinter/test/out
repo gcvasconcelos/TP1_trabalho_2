@@ -1,15 +1,14 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mTestPrettyPrinter:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mpretty printer[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31moberon.TestPrettyPrinter *** ABORTED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.StackOverflowError:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visit(PrettyPrinter.scala:118)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.expression.VarReference.accept(VarReference.scala:17)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visit(PrettyPrinter.scala:118)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.expression.VarReference.accept(VarReference.scala:17)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visit(PrettyPrinter.scala:118)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.expression.VarReference.accept(VarReference.scala:17)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "(3 + 7)" when we call accept in addexpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "((3 + 7) + 3)" when we call accept in addexpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "(3 == 3)" when we call accept in EqExpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "(3 == 7)" when we call accept in NeqExpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "(7 > 3)" when we call accept in GrExpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "(3 >= 3)" when we call accept in GeExpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "(3 % 3)" when we call accept in ModExpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "!true" when we call accept in a NotExpression[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "x = 3" when we call accept in VarReference[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "var x = 3" when we call accept in Assignment[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "if" when we call accept in IFTHEN[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print "Function" when we call accept in function[0m[0m

@@ -76,16 +76,6 @@ test
 testOnly *TestPocedure
 testOnly *TestProcedure
 test
+testOnly *TestPrettyPrinter
 compile
 test
-compile
-test
-compile
-test
-compile
-test
-compile
-test
-compile
-test
-git status
