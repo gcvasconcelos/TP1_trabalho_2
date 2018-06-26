@@ -4,7 +4,7 @@
 		module="tp1_trabalho_2-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20180624151139"
+		publication="20180625211006"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

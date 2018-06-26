@@ -1,4 +1,11 @@
-[0m[[0m[31merror[0m] [0m[0m/home/gcvasconcelos/Documents/UnB/2018-1/TP1/oberon/src/test/scala/oberon/command/TestProcedure.scala:26:5: not found: value prinln[0m
-[0m[[0m[31merror[0m] [0m[0m    prinln(stack)[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/test/scala/oberon/prettyprinter/TestPrettyPrinter.scala:233:40: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (oberon.expression.VarReference, oberon.expression.IntType)[0m
+[0m[[0m[31merror[0m] [0m[0m required: oberon.expression.Expression[0m
+[0m[[0m[31merror[0m] [0m[0m    val w2 = new Function("soma", List((new VarReference("x"), IntType()), (new VarReference("y"), IntType())))[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/carlossilvaa/Documents/tp1/tp1-trab2/TP1_trabalho_2/src/test/scala/oberon/prettyprinter/TestPrettyPrinter.scala:233:76: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (oberon.expression.VarReference, oberon.expression.IntType)[0m
+[0m[[0m[31merror[0m] [0m[0m required: oberon.expression.Expression[0m
+[0m[[0m[31merror[0m] [0m[0m    val w2 = new Function("soma", List((new VarReference("x"), IntType()), (new VarReference("y"), IntType())))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

@@ -115,13 +115,13 @@ class PrettyPrinter extends Visitor {
   }  
   
   def visit(e: VarReference)  : Unit = { 
+    /*str = e.id*/
     val exp = visitExp(e)
     str = exp
   }
   
   def visit(e: VarDeclaration): Unit = { 
-
-    // str = _type + " " + name
+    str = "var " + e.name
   }
 
   def visit(c: ProcedureDeclaration): Unit = {

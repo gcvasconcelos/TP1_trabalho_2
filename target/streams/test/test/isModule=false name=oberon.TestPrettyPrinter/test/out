@@ -1,0 +1,15 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTestPrettyPrinter:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mpretty printer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31moberon.TestPrettyPrinter *** ABORTED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.StackOverflowError:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visit(PrettyPrinter.scala:118)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.expression.VarReference.accept(VarReference.scala:17)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visit(PrettyPrinter.scala:118)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.expression.VarReference.accept(VarReference.scala:17)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visit(PrettyPrinter.scala:118)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.expression.VarReference.accept(VarReference.scala:17)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at oberon.visitor.PrettyPrinter.visitExp(PrettyPrinter.scala:185)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m

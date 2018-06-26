@@ -76,3 +76,16 @@ test
 testOnly *TestPocedure
 testOnly *TestProcedure
 test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+git status
